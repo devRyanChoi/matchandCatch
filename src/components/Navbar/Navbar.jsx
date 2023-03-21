@@ -12,15 +12,12 @@ const Navbar = () => {
   return(
   <nav className="app_navbar">
     <div className='app_navbar-logo'>
-      <img src={images.mc} alt="app logo" />
+      <a href="/">
+        <img src={images.mc} alt="app logo" />
+      </a>
       </div>
       <ul className='app_navbar-links'>
-      <Link to="/inventory">
-        <button variant="outlined">
-          Sign up
-        </button>
-      </Link>
-        <li className="p__opensans"><a href="#home">Past auction</a></li>
+        <li className="p__opensans"><a href="/inventory">Past auction</a></li>
         <li className="p__opensans"><a href="#home">Dealer offer</a></li>
         <li className="p__opensans"><a href="#home">Leaderboard</a></li>
       </ul>

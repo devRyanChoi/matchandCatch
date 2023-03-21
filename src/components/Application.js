@@ -5,7 +5,7 @@ import MenuItem from './Menuitem/MenuItem';
 import Navbar from './Navbar/Navbar';
 import Inventory from './Inventory/Inventory';
 import Main from './Main/Main';
-import Application from './Application'
+import { Routes, Route } from 'react-router-dom';
 export {
   SubHeading,
   Newsletter,
@@ -14,7 +14,6 @@ export {
   MenuItem,
   Inventory,
   Navbar,
-  Application
 };
 
 const test = [
@@ -114,3 +113,12 @@ const test = [
     image: 'https://i.imgur.com/v7OHbHy.jpeg'
   },
 ];
+
+export default function Application(props) {
+    return (
+      <Routes> {/* The Switch decides which component to show based on the current URL.*/}
+        <Route exact path='/' element={<Main/>}></Route>
+        <Route exact path='/inventory' element={<Inventory source={test}/>}></Route>
+      </Routes>
+    );
+};

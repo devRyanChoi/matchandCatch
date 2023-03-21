@@ -1,10 +1,10 @@
 import React from 'react';
-
-import { SubHeading } from '../../components';
+import { Switch, Route } from 'react-router-dom';
+import { SubHeading } from '..';
 import {images} from '../../constants';
-import './Header.css';
+import './Main.css';
 
-const Header = () => (
+const Main = () => (
   <div className='app__header app__wrapper section__padding' id='home'>
     <div className='app__wrapper_info'>
       <SubHeading title="We make selling your car easy, fast, and fair."/>
@@ -19,4 +19,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default Main;

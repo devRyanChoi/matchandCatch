@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillCloseCircle } from 'react-icons/ai';
-
+import { Link } from "react-router-dom";
 
 import images from '../../constants/images';
 import './Navbar.css';
@@ -15,6 +15,11 @@ const Navbar = () => {
       <img src={images.mc} alt="app logo" />
       </div>
       <ul className='app_navbar-links'>
+      <Link to="/inventory">
+        <button variant="outlined">
+          Sign up
+        </button>
+      </Link>
         <li className="p__opensans"><a href="#home">Past auction</a></li>
         <li className="p__opensans"><a href="#home">Dealer offer</a></li>
         <li className="p__opensans"><a href="#home">Leaderboard</a></li>

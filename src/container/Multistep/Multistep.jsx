@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillCloseCircle } from 'react-icons/ai';
-
-
 import images from '../../constants/images';
-import './Navbar.css';
 
-const Navbar = () => {
+import {useForm} from "react-hook-form";
+import './Multistep.css';
+
+const Multistep = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
-  return(
   <nav className="app_navbar">
     <div className='app_navbar-logo'>
       <img src={images.mc} alt="app logo" />
@@ -39,8 +38,7 @@ const Navbar = () => {
         )}
       </div>
   </nav>
-  )
-};
   
+}
 
-export default Navbar;
+export default Multistep;

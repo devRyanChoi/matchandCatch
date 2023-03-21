@@ -1,21 +1,21 @@
 import AboutUs from './AboutUs/AboutUs';
-import Chef from './Chef/Chef';
-import FindUs from './Findus/FindUs';
+import Multistep from './Multistep/Multistep';
+import MCInventory from './MCInventory/MCInventory';
 import Footer from './Footer/Footer';
 import Gallery from './Gallery/Gallery';
 import Header from './Header/Header';
 import Intro from './Intro/Intro';
-import Laurels from './Laurels/Laurels';
+import FinalizingTransaction from './FinalizingTransaction/FinalizingTransaction';
 import SpecialMenu from './Menu/SpecialMenu';
 
 export {
   AboutUs,
-  Chef,
-  FindUs,
+  Multistep,
+  MCInventory,
   Footer,
   Gallery,
   Header,
   Intro,
-  Laurels,
+  FinalizingTransaction,
   SpecialMenu,
 };

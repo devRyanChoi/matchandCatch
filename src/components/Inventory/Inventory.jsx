@@ -6,14 +6,14 @@ const Inventory =(props) =>{
   
   const imageSrc = props.source.map((imgur) =>{
     return(
-      <div className="inventory-item-container">
+      <a href={'/inventory/' + imgur.id} className="inventory-item-container">
         <img className="inventory-item-image" src={imgur.image}/>
         <div className="inventory-item-info">
           <div className="info-content">{imgur.Year}</div>
           <div className="info-content">{imgur.Maker}</div>
           <div className="info-content">{imgur.Model}</div>
         </div>
-      </div>
+    </a>
       
     );
   }

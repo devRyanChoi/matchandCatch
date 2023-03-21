@@ -9,33 +9,96 @@ const test = [
     id:1,
     seller_id:1,
     Maker: 'BMW',
-    MODE: 'X3',
+    Model: 'X3',
     Year: 2020,
-    Milage: 'https://i.imgur.com/xT48JyM.jpeg'
+    Milage: 120000,
+    image: 'https://i.imgur.com/xT48JyM.jpeg'
   },
   {
     id:2,
     seller_id:2,
     Maker: 'AUDI',
-    MODE: 'R8',
+    Model: 'R8',
     Year: 2020,
-    Milage: 'https://i.imgur.com/xT48JyM.jpeg'
+    Milage: 120000,
+    image: 'https://i.imgur.com/v7OHbHy.jpeg'
   },
   {
     id:3,
     seller_id:1,
     Maker: 'Mercedes-Benz',
-    MODE: 'Maybach',
+    Model: 'SLS AMG',
     Year: 2020,
-    Milage: 'https://i.imgur.com/xT48JyM.jpeg'
+    Milage: 120000,
+    image: 'https://i.imgur.com/xT48JyM.jpeg'
   },
   {
     id:4,
     seller_id:1,
     Maker: 'Honda',
-    MODE: 'Civi',
+    Model: 'Civic',
     Year: 2020,
-    Milage: 'https://i.imgur.com/xT48JyM.jpeg'
+    Milage: 120000,
+    image: 'https://i.imgur.com/v7OHbHy.jpeg'
+  },
+
+  {
+    id:4,
+    seller_id:1,
+    Maker: 'Honda',
+    Model: 'Civic',
+    Year: 2020,
+    Milage: 120000,
+    image: 'https://i.imgur.com/v7OHbHy.jpeg'
+  },
+
+  {
+    id:4,
+    seller_id:1,
+    Maker: 'Honda',
+    Model: 'Civic',
+    Year: 2020,
+    Milage: 120000,
+    image: 'https://i.imgur.com/v7OHbHy.jpeg'
+  },
+
+  {
+    id:4,
+    seller_id:1,
+    Maker: 'Honda',
+    Model: 'Civic',
+    Year: 2020,
+    Milage: 120000,
+    image: 'https://i.imgur.com/v7OHbHy.jpeg'
+  },
+
+  {
+    id:4,
+    seller_id:1,
+    Maker: 'Honda',
+    Model: 'Civic',
+    Year: 2020,
+    Milage: 120000,
+    image: 'https://i.imgur.com/v7OHbHy.jpeg'
+  },
+
+  {
+    id:4,
+    seller_id:1,
+    Maker: 'Honda',
+    Model: 'Civic',
+    Year: 2020,
+    Milage: 120000,
+    image: 'https://i.imgur.com/v7OHbHy.jpeg'
+  },
+  {
+    id:4,
+    seller_id:1,
+    Maker: 'Honda',
+    Model: 'Civic',
+    Year: 2020,
+    Milage: 120000,
+    image: 'https://i.imgur.com/v7OHbHy.jpeg'
   },
 ];
 

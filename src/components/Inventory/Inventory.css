@@ -1,0 +1,37 @@
+.inventory{
+  display:flex;
+  flex-direction: row;
+  height:100%;
+  width:100%;
+}
+
+.inventory-sidebar{
+  width:10%;
+  height:100%;
+}
+
+.inventory-item{
+  display:flex;
+  flex-wrap: wrap;
+  width:90%
+}
+
+.inventory-item-container{
+  width:25%;
+  height:auto;
+  padding:2rem;
+}
+
+.inventory-item-image{
+  width:100%;
+  height:80%;
+}
+.inventory-item-info{
+  display:flex;
+  flex-direction:row;
+}
+
+.info-content{
+  margin-left:0.5%;
+  margin-right:0.5%;
+}

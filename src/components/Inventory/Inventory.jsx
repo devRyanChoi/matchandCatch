@@ -1,20 +1,28 @@
 import React, {useState} from 'react';
-//import './Inventory.css';
+import './Inventory.css';
 
 
 const Inventory =(props) =>{
   
   const imageSrc = props.source.map((imgur) =>{
-    console.log(imgur.Milage);
     return(
-      <img src={imgur.Milage}/>
+      <div className="inventory-item-container">
+        <img className="inventory-item-image" src={imgur.image}/>
+        <div className="inventory-item-info">
+          <div className="info-content">{imgur.Year}</div>
+          <div className="info-content">{imgur.Maker}</div>
+          <div className="info-content">{imgur.Model}</div>
+        </div>
+        
+      </div>
+      
     );
   }
   );
   return(
-    <div>
-      <section></section>
-      <div>{imageSrc}</div>
+    <div className="inventory">
+      <div className="inventory-sidebar">We Will Place Filters</div>
+      <div className="inventory-item">{imageSrc}</div>
     </div>
     
   );

@@ -1,0 +1,79 @@
+.myAuctionHeader {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.myAuctionList {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.myAuctionItem {
+  width: 900px;
+  height: 180px;
+  border-style: solid;
+  border-color: #aeb6d6;
+  border-width: 1px;
+  border-radius: 12px;
+}
+
+.myAuctionItemName {
+  margin-top: 22px;
+  margin-left: 346px;
+}
+
+.myAuctionItemPrice {
+  margin-top: 8px;
+  margin-left: 346px;
+  display: flex;
+}
+
+.myAuctionItemPriceNumber {
+  margin-left: 381px;
+}
+
+.myAuctionItemSteps {
+  margin-top: 27px;
+  margin-left: 346px;
+  display: flex;
+}
+
+.myAuctionItemStep {
+  width: 110px;
+  height: 42px;
+  font-size: 10px;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-color: #ff0000;
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: #ff0000;
+}
+
+.line {
+  height: 1px;
+  width: 90px;
+  margin-top: 5px;
+  margin-right: 4px;
+  background-color: #ff0000;
+}
+
+.myAuctionItemLine {
+  display: flex;
+}
+
+.myAuctionItemStepTime {
+  margin-top: 3px;
+  font-size: 10px;
+  color: #ffa200;
+  font-weight: bold;
+}
+
+.myAuctionTotal {
+  font-family: 'Mulish';
+}

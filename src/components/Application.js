@@ -5,6 +5,8 @@ import MenuItem from './Menuitem/MenuItem';
 import Navbar from './Navbar/Navbar';
 import Inventory from './Inventory/Inventory';
 import Main from './Main/Main';
+import PastAuction from './PastAuction/PastAuction';
+import MyAuction from './MyAuction/MyAuction';
 import { Routes, Route } from 'react-router-dom';
 export {
   SubHeading,
@@ -14,6 +16,8 @@ export {
   MenuItem,
   Inventory,
   Navbar,
+  PastAuction,
+  MyAuction,
 };
 
 const test = [
@@ -118,7 +122,8 @@ export default function Application(props) {
     return (
       <Routes> {/* The Switch decides which component to show based on the current URL.*/}
         <Route exact path='/' element={<Main/>}></Route>
-        <Route exact path='/inventory' element={<Inventory source={test}/>}></Route>
+        <Route exact path='/pastAuction' element={<PastAuction source={test}/>}></Route>
+        <Route exact path='/myAuction' element={<MyAuction source={test}/>}></Route>
       </Routes>
     );
 };

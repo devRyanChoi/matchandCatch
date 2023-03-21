@@ -13,7 +13,6 @@ const Inventory =(props) =>{
           <div className="info-content">{imgur.Maker}</div>
           <div className="info-content">{imgur.Model}</div>
         </div>
-        
       </div>
       
     );

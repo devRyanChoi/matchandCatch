@@ -3,7 +3,6 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import images from '../../constants/images';
 
-import {useForm} from "react-hook-form";
 import './Multistep.css';
 
 const Multistep = () => {

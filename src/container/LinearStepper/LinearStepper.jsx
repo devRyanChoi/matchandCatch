@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   Typography,
   TextField,
@@ -8,10 +9,9 @@ import {
   StepLabel,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { IoImageOutline } from 'react-icons/io';
+import { BsCardImage } from 'react-icons/bs';
 
 import {useForm, FormProvider, useFormContext, Controller} from "react-hook-form";
-
 const useStyles = makeStyles((theme) => ({
   button: {
     marginRight: theme.spacing(1),
@@ -68,86 +68,162 @@ const CarInformation = () => {
 };
 const CarImages = () => {
   const {control} = useFormContext();
+
+
   return(
     <>
-      <div className="wrapper">
-        <div className="box">
-          <div className="input-box">
-            <h2 className="upload-area-title">Upload car image</h2>
-            <form action="">
-              <input type="file" className="upload" accept='.png, .jpg, .jpeg'/>
-              <label htmlFor="upload" className="uploadlabel">
-                <span><IoImageOutline/></span>
-              </label>
-            </form>
-          </div>
-        </div>
-      </div>
+
     </>
   );
-  // return(
-  //   <>
-  //         <TextField
-  //           id="email"
-  //           label="E-mail"
-  //           variant="outlined"
-  //           placeholder="Enter Your E-mail Address"
-  //           fullWidth
-  //           margin="normal"
-  //           name="emailAddress"
-  //         />
-  //         <TextField
-  //           id="phone-number"
-  //           label="Phone Number"
-  //           variant="outlined"
-  //           placeholder="Enter Your Phone Number"
-  //           fullWidth
-  //           margin="normal"
-  //           name="phoneNumber"
-  //         />
-  //         <TextField
-  //           id="alternate-phone"
-  //           label="Alternate Phone"
-  //           variant="outlined"
-  //           placeholder="Enter Your Alternate Phone"
-  //           fullWidth
-  //           margin="normal"
-  //           name="alternatePhone"
-  //         />
-  //       </>
-  // );
 };
 const AppraisalForm = () => {
   return(
-<>
-          <TextField
-            id="address1"
-            label="Address 1"
-            variant="outlined"
-            placeholder="Enter Your Address 1"
-            fullWidth
-            margin="normal"
-            name="address1"
-          />
-          <TextField
-            id="address2"
-            label="Address 2"
-            variant="outlined"
-            placeholder="Enter Your Address 2"
-            fullWidth
-            margin="normal"
-            name="address2"
-          />
-          <TextField
-            id="country"
-            label="Country"
-            variant="outlined"
-            placeholder="Enter Your Country Name"
-            fullWidth
-            margin="normal"
-            name="country"
-          />
-        </>
+  <>
+    <div className='af-form'>
+      <div>
+        <p>1.Select the condition that best mathches your vehicle.</p>
+        <div className='ci1-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Excellent(Looks new)
+        </div>
+        <div className="ci1-checks2">
+          <input type="radio" name = "subject" value = "appia2"/>Good (Some normal wears)
+        </div>
+        <div className="ci1-check3">
+          <input type="radio" name = "subject" value = "appia3"/>Bad (Numerous wears that require repairing)
+        </div>
+      </div>
+      <div></div>
+      <div>
+        <p>2.Select the condition that best mathches your rims.</p>
+        <div className='ci2-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Excellent(Looks new)
+        </div>
+        <div className="ci2-checks2">
+          <input type="radio" name = "subject" value = "appia2"/>Good (Some normal wears)
+        </div>
+        <div className="ci2-check3">
+          <input type="radio" name = "subject" value = "appia3"/>Bad (Numerous wears that require repairing)
+        </div>
+      </div>
+      <div>
+          <p>3. Do you see any wearing lights appearing on your car's dashboard?</p>
+          <div className='ci3-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes (If yes, What kind of warning light illuniated?)
+        </div>
+        <div className="ci3-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No
+        </div>
+      </div>
+      <div>
+          <p>4. Have you perfomed any mechnical variation on your car from producton Specs?</p>
+          <div className='ci4-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes (If yes, please choose from the following options)
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Exhaust
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Suspension
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Exterior
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Performance
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Car Infotainment system
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Other
+          </div>
+        </div>
+        <div className="ci-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No
+        </div>
+      </div>
+      <div>
+          <p>5. Do you have any spare keys for your vehicle?</p>
+          <div className='ci3-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes</div>
+        <div className="ci3-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No </div>
+      </div>
+      <div>
+          <p>6. Does your vehicle have a spare tire?</p>
+          <div className='ci3-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes</div>
+        <div className="ci3-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No </div>
+      </div>
+      <div>
+          <p>7. Does your vehicle have a spare tire?</p>
+          <div className='ci3-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes</div>
+        <div className="ci3-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No </div>
+      </div>
+      <div>
+          <p>8. Does your vehicle have any records of accident repairs</p>
+          <div className='ci3-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes</div>
+        <div className="ci3-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No </div>
+      </div>
+      <div>
+          <p>9. Does he vehicle have any mechanical probelm?</p>
+          <div className='ci9-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes (If yes, please choose from the following options)
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Powertrain(Engine & Trnsmission)
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Brakes
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />A/C
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Exhaust (example: Black smoke or Loud noise)
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Suspension
+          </div>
+          <div>
+            <input type="checkbox" className="checkbox exhaust" />Oil Leak
+          </div>
+        </div>
+        <div className="ci-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No
+        </div>
+      </div>
+      <div>
+          <p>10. Does your vehicle have a spare tire?</p>
+          <div className='ci3-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes</div>
+        <div className="ci3-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No </div>
+      </div>
+      <div>
+          <p>11. Does your vehicle have a spare tire?</p>
+          <div className='ci3-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes</div>
+        <div className="ci3-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No </div>
+      </div>
+      <div>
+          <p>12. Do you find any bent or dent on your vehicle?</p>
+          <div className='ci3-check1'>
+          <input type="radio" name = "subject" value = "appia1"/>Yes</div>
+        <div className="ci3-checks2">
+          <input type="radio" name = "subject" value = "appia2"/> No </div>
+      </div>
+    </div>
+    
+  </>
     );
 };
 const Complete = () => {

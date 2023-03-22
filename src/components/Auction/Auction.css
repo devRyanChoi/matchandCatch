@@ -1,0 +1,130 @@
+.auction-main{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:2%;
+  font-family: 'Mulish';
+}
+.active-auction {
+  font-size: 1.5vw;
+}
+
+.Timer{
+  font-size: 3vw;
+  color:#cf7800;
+}
+.auction {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 2%;
+  width: 80%;
+  height: 20%;
+  position: relative;
+  font-family: 'Mulish';
+}
+
+.image-container{
+  width:80%;
+  height: 40%;
+}
+
+.car-image{
+  margin-left: 10;
+  width:80%;
+  height:auto;
+}
+
+.screen-shot-2022-03-17-at-1052-2 {
+  border: 2px solid;
+  border-color: var(--rose);
+  border-radius: 10px 0px 0px 10px;
+  height: 82px;
+  width: 156px;
+}
+.auction-info-container{
+  display:flex;
+  flex-direction:column;
+  box-sizing: border-box;
+  width: 30%;
+  height: auto;
+  border: 1px solid #E7ECF5;  
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  font-family:'Mulish';
+  font-style: normal;
+}
+
+.auction-info{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.infobox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  margin-left:5%;
+  height: 80%;
+}
+
+
+.line{
+  margin-left:5%;
+  width: 90%;
+  border: 1px solid #E7ECF5;
+}
+
+.auction-best-price{
+  font-size: 1.3vw;
+  text-align:center;
+  color: #545454;
+}
+
+.auction-bid{
+  box-sizing: border-box;
+ 
+}
+
+.auction-price{
+  font-weight: 700;
+  font-size: 3vw;
+  line-height: 50px;
+  text-align: center;
+  color: #F94F4F;
+}
+
+.auction-carname{
+  display:flex;
+  font-weight: 700;
+  font-size: 2vw;
+  margin-top: 5%;
+}
+
+.view-appraisal-form {
+  background-color: #F7613C;
+  border-radius: 4px;
+  letter-spacing: 0;
+  line-height: normal;
+
+  width: 60%;
+  height: 10%;
+  font-size:1.2vw;
+  color: #FFFFFF;
+  margin-left:20%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+.auction-tag{
+  font-size:1.3vw;
+}
+.auction-tag-value{
+  font-size:1vw;
+}
+.auction-spacing{
+  margin-right: 1.5%;
+}

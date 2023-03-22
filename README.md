@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
+npm install
+npm install babel-plugin-macros
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
 ### `npm start`
 
 Runs the app in the development mode.\

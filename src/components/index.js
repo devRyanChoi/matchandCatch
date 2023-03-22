@@ -3,6 +3,8 @@ import Newsletter from './Footer/Newsletter';
 import FooterOverlay from './Footer/FooterOverlay';
 import MenuItem from './Menuitem/MenuItem';
 import Navbar from './Navbar/Navbar';
+import LoginSingup from './LoginSignup/index'
+
 
 
 export {
@@ -11,5 +13,6 @@ export {
   FooterOverlay,
   MenuItem,
   Navbar,
-
+  LoginSingup,
+  
 };

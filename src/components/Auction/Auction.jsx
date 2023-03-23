@@ -14,17 +14,17 @@ const Auction = (props) => {
   const imageSrcs = props.image.filter((img) => img.vehicle_id == id)
   const image = imageSrcs[0];
   
-  const auctions = auction.map((auc) =>{
-    const findDealer = props.dealer.filter((deal) => deal.id == auc.dealer_id);
-    const dealerName = findDealer[0].name;
-      return(
-        <div className="bid-container">
-          <div>{dealerName}</div>
-          <div>${auc.bid}</div>
-          <div>BUTTON</div> 
-        </div>
-      )
-  })
+  // const auctions = auction.map((auc) =>{
+  //   const findDealer = props.dealer.filter((deal) => deal.id == auc.dealer_id);
+  //   const dealerName = findDealer[0].name;
+  //     return(
+  //       <div className="bid-container">
+  //         <div>{dealerName}</div>
+  //         <div>${auc.bid}</div>
+  //         <div>BUTTON</div> 
+  //       </div>
+  //     )
+  // })
   if(!car)
   {
     return(<>LOADING</>);
@@ -36,7 +36,7 @@ const Auction = (props) => {
         Active Auction
       </div>
       <div className="Timer">
-      <Countdown date={Date.now() + 1000*60} />
+        <Countdown date={Date.now() + 1000*60} />
       </div>
       <div className="auction">
             
@@ -50,9 +50,9 @@ const Auction = (props) => {
           <button className="view-appraisal-form">View Appraisal Form</button>
         </div>
       </div>
-      <div className="auction-biddings">
+      {/* <div className="auction-biddings">
         {auctions}
-      </div>      
+      </div>       */}
     </div>
   );
 }

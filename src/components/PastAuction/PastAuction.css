@@ -1,45 +1,47 @@
 .pastAuctionList {
   width: 100%;
   display: flex;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  gap:2rem;
+  margin-top: 2vw;
   justify-content: center;
 }
 
 .pastAuctionItem {
-  width: 544px;
-  height: 602px;
+  width: 26rem;
+  height: 38rem;
   border-style: solid;
   border-color: #aeb6d6;
   border-width: 1px;
-  border-radius: 12px;
+  border-radius: 0.8rem;
 }
 
 .pastAuctionTag {
-  width: 478px;
-  height: 90px;
+  width: 87.9%;
+  height: 15.9%;
   border-style: solid;
   border-color: #aeb6d6;
   border-width: 1px;
-  border-radius: 12px;
+  border-radius: 0.8rem;
   display: flex;
   align-items: center;
-  margin-left: 33px;
-  margin-top: 266px;
+  margin-left: 6%;
 }
 
 .userAvatar {
-  width: 54px;
-  height: 54px;
+  width: 3.5rem;
+  height: 3.5rem;
   border-style: solid;
   border-color: #aeb6d6;
   border-width: 1px;
-  border-radius: 27px;
+  border-radius: 50%;
   background-color: #b1b1b1;
 }
 
 .pastAuctionDetail {
-  width: 478px;
-  margin-left: 33px;
+  width: 86%;
+  height:40%;
+  margin-left: 7%;
 }
 
 .pastAuctionDetailLine {
@@ -47,11 +49,12 @@
 }
 
 .userAvatar {
-  margin-left: 20px;
+  margin-left: 5%;
 }
 
 .userInfo {
-  margin-left: 14px;
+  margin-left: 3%;
+  width:50%;
 }
 
 .userName {
@@ -59,15 +62,15 @@
 }
 
 .userPaied {
-  margin-left: 154px;
+  margin-right: 5%
 }
 
 .userCheckIcon {
-  margin-left: 30px;
+  margin-right: 5%;
 }
 
 .pastAuctionDetailLine {
-  padding-top: 20px;
+  padding-top:5%;
 }
 
 .pastAuctionDetailLineResult {
@@ -76,7 +79,8 @@
 }
 
 .pastAuctionTotal {
-  font-family: 'Mulish';
+  font-family: 'Open Sans';
+  height:100%;
 }
 
 h2 {
@@ -91,4 +95,9 @@ p {
 
 .pastAuctionHeader {
   justify-content: center;
+  font-weight: 400;
+}
+
+.pastAuctionCarImage{
+  height:43%;
 }

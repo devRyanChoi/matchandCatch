@@ -9,12 +9,14 @@ export default function useApplicationData(props) {
     dealer: [],
     auctions: [],
     images: [],
+    transactions:[],
     status: false,
-    admin: false
+    admin: false,
+    users: 0
   });
 
   //axios.post(url, )
-  axios.post("/api/vehicles",{name:"BMW"})
+  //axios.post("/api/vehicles",{name:"BMW"})
   
 
   useEffect(() => {
@@ -24,6 +26,7 @@ export default function useApplicationData(props) {
       axios.get("/api/dealers"),
       axios.get("/api/images"),
       axios.get("/api/sellers"),
+      axios.get("/api/transactions"),
     ]).then((all) => {
       setState((prev) => ({
         ...prev,
@@ -31,7 +34,8 @@ export default function useApplicationData(props) {
         auctions: all[1].data,
         dealers: all[2].data,
         images: all[3].data,
-        sellers: all[4].data
+        sellers: all[4].data,
+        transactions: all[5].data
       }));
     });
   }, []);

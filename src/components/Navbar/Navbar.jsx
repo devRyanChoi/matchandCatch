@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import images from '../../constants/images';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  //if (props.admin === true);
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return(

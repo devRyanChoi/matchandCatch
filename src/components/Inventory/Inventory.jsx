@@ -3,8 +3,6 @@ import './Inventory.css';
 
 
 const Inventory =(props) =>{
-
-
   const imageSrc = props.vehicle.map((imgur) =>{
     const imageSrcs = props.image.filter((img) => img.vehicle_id == imgur.id)
     const image = imageSrcs[0];

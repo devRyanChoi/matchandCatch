@@ -1,15 +1,15 @@
 import React from 'react';
-import { AboutUs, Multistep, Footer, Gallery, Header, Intro, FinalizingTransaction, SpecialMenu } from './container';
 import { Navbar, Inventory, Main, Application} from './components';
-
+import useApplicationData from "./hooks/useApplicationData";
 import './App.css';
 
 
 export default function App() {
+  const { state} = useApplicationData(); 
   return(
   <div>
     <Navbar />
-    <Application/>
+    <Application state={state}/>
   </div>);
 }
 

@@ -1,6 +1,7 @@
 import SubHeading from './SubHeading/SubHeading';
-import Newsletter from './Footer/Newsletter';
-import FooterOverlay from './Footer/FooterOverlay';
+// import Newsletter from './Footer/Newsletter';
+// import FooterOverlay from './Footer/FooterOverlay';
+import Footer from './Footer/Footer';
 import MenuItem from './Menuitem/MenuItem';
 import Navbar from './Navbar/Navbar';
 import Inventory from './Inventory/Inventory';
@@ -12,8 +13,9 @@ import { Routes, Route } from 'react-router-dom';
 import{useState} from 'react';
 export {
   SubHeading,
-  Newsletter,
-  FooterOverlay,
+  // Newsletter,
+  // FooterOverlay,
+  Footer,
   Auction,
   Main,
   MenuItem,

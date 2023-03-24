@@ -8,10 +8,17 @@ In the project directory, you can run:
 
 ### `npm install`
 ```npm install```
+
 If you face some error of Babel icon, you can use the following command to fix them.
+
 ```npm install babel-plugin-macros```
+
 ```npm i --save @fortawesome/fontawesome-svg-core```
+
+```npm i --save @fortawesome/free-brands-svg-icons```
+
 ```npm install --save @fortawesome/free-solid-svg-icons```
+
 ```npm install --save @fortawesome/react-fontawesome```
 
 ### `npm start`

@@ -17,8 +17,7 @@ export default function useApplicationData(props) {
 
   //axios.post(url, )
   //axios.post("/api/vehicles",{name:"BMW"})
-  
-
+  const setAuction = (auctions) => setState({ ...state, auctions});
   useEffect(() => {
     Promise.all([
       axios.get("/api/vehicles"),
@@ -40,7 +39,16 @@ export default function useApplicationData(props) {
     });
   }, []);
 
+  function makeBid(id, auction) {
+
+    const auctions = [...state.auctions, auction];
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    return axios.put(`/api/auctions/${id}`, { auction }).
+    then((result) =>   {
+      setState({...state, auctions:[...state.auctions,auction]});
+    });
+  };
   
 
-  return { state};
+  return {state, setAuction, makeBid};
 }

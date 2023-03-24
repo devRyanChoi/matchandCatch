@@ -5,12 +5,11 @@ import './App.css';
 
 
 export default function App() {
-  const { state} = useApplicationData(); 
+  const { state, setAuction, makeBid} = useApplicationData(); 
   return(
   <div>
     <Navbar />
-    <Application state={state}/>
-    <Footer />
+    <Application state={state} setAuction={setAuction} makeBid={makeBid}/>
   </div>);
 }
 

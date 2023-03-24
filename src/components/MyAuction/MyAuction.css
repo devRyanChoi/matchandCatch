@@ -6,7 +6,7 @@
 .myAuctionList {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 2.5rm;
 }
 
 .myAuctionItem {

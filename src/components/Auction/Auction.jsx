@@ -5,15 +5,37 @@ import Countdown from 'react-countdown';
 import './Auction.css';
 import Infobox from './Sections/Infobox';
 import Result from './Result/Result';
+import useVisualMode from "../../hooks/useVisualMode";
+import AuctionInput from './Sections/AuctionInput';
+
 const Auction = (props) => {
+  const EMPTY = "EMPTY";
+  const SAVING ="SAVING";
   const {id} = useParams();
-  const carz = props.vehicle.filter((cars) => cars.id == id);
-  const auction = props.auction.filter((auc) => auc.vehicle_id == id)
+  
+  const { mode, transition, back } = useVisualMode(
+    EMPTY
+  );
+  const carz = props.state.vehicles.filter((cars) => cars.id == id);
+
+  const auction = props.state.auctions.filter((auc) => auc.vehicle_id == id)
   const car = carz[0];
   
-  const imageSrcs = props.image.filter((img) => img.vehicle_id == id)
+  const imageSrcs = props.state.images.filter((img) => img.vehicle_id == id)
   const image = imageSrcs[0];
-  
+
+  function onBid (number, vehicleId, dealerId, price) {
+    
+    const auctions = {
+      id: number,
+      vehicle_id: vehicleId, 
+      dealer_id: dealerId, 
+      bid: Number(price), 
+      selected: false
+    };
+    props.makeBid(number, auctions);
+  };
+
   // const auctions = auction.map((auc) =>{
   //   const findDealer = props.dealer.filter((deal) => deal.id == auc.dealer_id);
   //   const dealerName = findDealer[0].name;
@@ -27,9 +49,8 @@ const Auction = (props) => {
   // })
   if(!car)
   {
-    return(<>LOADING</>);
+    return(<></>);
   }
-  console.log(car.create_at);
   return (
     <div className="auction-main">
       <div className="active-auction">
@@ -51,9 +72,9 @@ const Auction = (props) => {
         </div>
       </div>
       <Result/>
-      {/* <div className="auction-biddings">
-        {auctions}
-      </div>       */}
+
+      {/* {mode === EMPTY &&<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>} */}
+   
     </div>
   );
 }

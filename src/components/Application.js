@@ -25,12 +25,6 @@ export {
 
 
 export default function Application(props) {
-  const sellers = props.state.sellers;
-  const vehicles = props.state.vehicles;
-  const auctions = props.state.auctions;
-  const dealers = props.state.dealers;
-  const images = props.state.images;
-  const transactions = props.state.transactions;
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
       <Route exact path='/' element={<Main/>}></Route>
@@ -38,7 +32,7 @@ export default function Application(props) {
       <Route exact path='/myAuction' element={<MyAuction {...props} />}></Route>
       <Route exact path='/inventory/' element={<Inventory {...props}/>}></Route>
       
-      <Route exact path='/inventory/:id' element={<Auction auction={auctions} vehicle={vehicles} dealer={dealers} image={images}/>}></Route>
+      <Route exact path='/inventory/:id' element={<Auction {...props}/>}></Route>
     
     </Routes>
   );

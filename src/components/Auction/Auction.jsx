@@ -4,16 +4,39 @@ import { useParams } from 'react-router-dom'
 import Countdown from 'react-countdown';
 import './Auction.css';
 import Infobox from './Sections/Infobox';
+import useVisualMode from "../../hooks/useVisualMode";
+import AuctionInput from './Sections/AuctionInput';
 
 const Auction = (props) => {
+  const EMPTY = "EMPTY";
+  const SAVING ="SAVING";
   const {id} = useParams();
-  const carz = props.vehicle.filter((cars) => cars.id == id);
-  const auction = props.auction.filter((auc) => auc.vehicle_id == id)
+  
+  const { mode, transition, back } = useVisualMode(
+    EMPTY
+  );
+  const carz = props.state.vehicles.filter((cars) => cars.id == id);
+  console.log(props.state.auctions);
+  console.log("HELLO");
+  const auction = props.state.auctions.filter((auc) => auc.vehicle_id == id)
   const car = carz[0];
   
-  const imageSrcs = props.image.filter((img) => img.vehicle_id == id)
+  const imageSrcs = props.state.images.filter((img) => img.vehicle_id == id)
   const image = imageSrcs[0];
-  
+
+  function onBid (number, vehicleId, dealerId, price) {
+    
+    const auctions = {
+      id: number,
+      vehicle_id: vehicleId, 
+      dealer_id: dealerId, 
+      bid: Number(price), 
+      selected: false
+    };
+    const auction = [...props.state.auctions,auctions]
+    props.setAuction(auction);
+  };
+
   // const auctions = auction.map((auc) =>{
   //   const findDealer = props.dealer.filter((deal) => deal.id == auc.dealer_id);
   //   const dealerName = findDealer[0].name;
@@ -27,9 +50,8 @@ const Auction = (props) => {
   // })
   if(!car)
   {
-    return(<>LOADING</>);
+    return(<></>);
   }
-  console.log(car.create_at);
   return (
     <div className="auction-main">
       <div className="active-auction">
@@ -50,6 +72,8 @@ const Auction = (props) => {
           <button className="view-appraisal-form">View Appraisal Form</button>
         </div>
       </div>
+
+      {mode === EMPTY &&<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>}
       {/* <div className="auction-biddings">
         {auctions}
       </div>       */}

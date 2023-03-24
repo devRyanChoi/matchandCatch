@@ -17,7 +17,7 @@ export default function useApplicationData(props) {
 
   //axios.post(url, )
   //axios.post("/api/vehicles",{name:"BMW"})
-  
+  const setAuction = (auctions) => setState({ ...state, auctions});
   useEffect(() => {
     Promise.all([
       axios.get("/api/vehicles"),
@@ -41,5 +41,5 @@ export default function useApplicationData(props) {
 
   
 
-  return {state};
+  return {state, setAuction};
 }

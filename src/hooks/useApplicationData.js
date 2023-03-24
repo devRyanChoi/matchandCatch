@@ -39,7 +39,16 @@ export default function useApplicationData(props) {
     });
   }, []);
 
+  function makeBid(id, auction) {
+
+    const auctions = [...state.auctions, auction];
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    return axios.put(`/api/auctions/${id}`, { auction }).
+    then((result) =>   {
+      setState({...state, auctions:[...state.auctions,auction]});
+    });
+  };
   
 
-  return {state, setAuction};
+  return {state, setAuction, makeBid};
 }

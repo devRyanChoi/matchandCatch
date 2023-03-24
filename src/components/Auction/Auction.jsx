@@ -16,8 +16,7 @@ const Auction = (props) => {
     EMPTY
   );
   const carz = props.state.vehicles.filter((cars) => cars.id == id);
-  console.log(props.state.auctions);
-  console.log("HELLO");
+
   const auction = props.state.auctions.filter((auc) => auc.vehicle_id == id)
   const car = carz[0];
   
@@ -33,8 +32,7 @@ const Auction = (props) => {
       bid: Number(price), 
       selected: false
     };
-    const auction = [...props.state.auctions,auctions]
-    props.setAuction(auction);
+    props.makeBid(number, auctions);
   };
 
   // const auctions = auction.map((auc) =>{

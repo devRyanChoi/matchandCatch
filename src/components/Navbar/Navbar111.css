@@ -1,0 +1,76 @@
+.navbar{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+  
+.container{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.logo{
+ font-Size: 30px;
+ font-weight: bold;
+}
+.logo .dot {
+  color: #F94F4F;
+}
+
+.links{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 500;
+}
+span:hover{
+  display: inline-block;
+  position: relative;
+  color: #F94F4F;
+}
+.user{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+img{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.options{
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 20px;
+  background-color: #F94F4F;
+  border-radius: 1em;
+  border: 10px;
+  border: 1px solid #F94F4F;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+  font-weight: 300;
+}
+
+.links button {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: transparent;
+}
+.links button:hover {
+background-color: #F94F4F;
+border-color: #F94F4F;
+}

@@ -71,7 +71,9 @@ const Auction = (props) => {
           <button className="view-appraisal-form">View Appraisal Form</button>
         </div>
       </div>
-      <Result/>
+      
+        <Result {...props} vehicleId={car.id}/>
+      
 
       {/* {mode === EMPTY &&<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>} */}
    

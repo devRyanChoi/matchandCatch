@@ -5,8 +5,8 @@ import axios from "axios";
 export default function useApplicationData(props) {
   const [state, setState] = useState({
     vehicles: [],
-    seller: [],
-    dealer: [],
+    sellers: [],
+    dealers: [],
     auctions: [],
     images: [],
     transactions:[],

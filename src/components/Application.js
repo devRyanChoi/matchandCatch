@@ -11,6 +11,7 @@ import PastAuction from './PastAuction/PastAuction';
 import MyAuction from './MyAuction/MyAuction';
 import { Routes, Route } from 'react-router-dom';
 import{useState} from 'react';
+import Signin from './Signin/Signin'
 export {
   SubHeading,
   // Newsletter,
@@ -23,6 +24,7 @@ export {
   Navbar,
   PastAuction,
   MyAuction,
+  Signin
 };
 
 
@@ -35,7 +37,7 @@ export default function Application(props) {
       <Route exact path='/inventory/' element={<Inventory {...props}/>}></Route>
       
       <Route exact path='/inventory/:id' element={<Auction {...props}/>}></Route>
-    
+      <Route exact path='/signin' element={<Signin {...props}/>}></Route>
     </Routes>
   );
 };

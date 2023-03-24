@@ -23,7 +23,7 @@ const Navbar = (props) => {
         <li className="p__opensans"><a href="#home">Leaderboard</a></li>
       </ul>
       <div className="app__navbar-login">
-        <a href="/" className="p__opensans">My Auction</a>
+        <a href="/myAuction" className="p__opensans">My Auction</a>
         <div/>
         <a href="#" className='p__opensans'>Sign In</a>
       </div>

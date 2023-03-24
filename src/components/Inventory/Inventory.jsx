@@ -3,9 +3,11 @@ import StatusTag from './Help/StatusTag';
 import './Inventory.css';
 
 const Inventory =(props) =>{
-  
-  const imageSrc = props.vehicle.map((imgur) =>{
-    const imageSrcs = props.image.filter((img) => img.vehicle_id == imgur.id)
+  if(!props.state.vehicles) {
+    return(<></>);
+  }
+  const imageSrc = props.state.vehicles.map((imgur) =>{
+    const imageSrcs = props.state.images.filter((img) => img.vehicle_id == imgur.id)
     const image = imageSrcs[0];
     console.log(image);
     if(!image){

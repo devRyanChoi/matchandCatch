@@ -1,0 +1,103 @@
+.pastAuctionList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  margin-top: 2vw;
+  justify-content: center;
+}
+
+.pastAuctionItem {
+  width: 26rem;
+  height: 38rem;
+  border-style: solid;
+  border-color: #aeb6d6;
+  border-width: 1px;
+  border-radius: 0.8rem;
+}
+
+.pastAuctionTag {
+  width: 87.9%;
+  height: 15.9%;
+  border-style: solid;
+  border-color: #aeb6d6;
+  border-width: 1px;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin-left: 6%;
+}
+
+.userAvatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-style: solid;
+  border-color: #aeb6d6;
+  border-width: 1px;
+  border-radius: 50%;
+  background-color: #b1b1b1;
+}
+
+.pastAuctionDetail {
+  width: 86%;
+  height:40%;
+  margin-left: 7%;
+}
+
+.pastAuctionDetailLine {
+  display: flex;
+}
+
+.userAvatar {
+  margin-left: 5%;
+}
+
+.userInfo {
+  margin-left: 3%;
+  width:50%;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+.userPaied {
+  margin-right: 5%
+}
+
+.userCheckIcon {
+  margin-right: 5%;
+}
+
+.pastAuctionDetailLine {
+  padding-top:5%;
+}
+
+.pastAuctionDetailLineResult {
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+.pastAuctionTotal {
+  font-family: 'Open Sans';
+  height:100%;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+p {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.pastAuctionHeader {
+  justify-content: center;
+  font-weight: 400;
+}
+
+.pastAuctionCarImage{
+  height:43%;
+}

@@ -1,8 +1,17 @@
 import React from 'react';
 
 import './MyAuction.css';
+import DealerAuction from './DealerAuction';
+export default function MyAuction(props) {
+  
+  if(props.state.admin){
+    return(
+    <DealerAuction dealer={props.state.dealers} transaction={props.state.transactions} vehicle={props.state.vehicles}/>
+    )
+  }
 
-const MyAuction = () => (
+  else {
+  return(
   <div className='myAuctionTotal'>
     <div className='myAuctionHeader'>
       <h2>My Auction</h2>
@@ -59,6 +68,6 @@ const MyAuction = () => (
     </div>
 
   </div>
-);
-
-export default MyAuction;
+  );
+  }
+};

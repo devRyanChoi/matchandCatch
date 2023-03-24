@@ -2,11 +2,12 @@
   font-family: 'Open Sans';
   margin-top: 2%;
   margin-bottom: 2%;
+  width:80rem;
 }
 
 .resultLine {
   display: flex;
-  width: auto;
+  width: 80%;
   height: 100px;
   border-style: solid;
   border-color: #aeb6d6;

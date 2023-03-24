@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram
-} from "@fortawesome/free-brands-svg-icons";
+// import {
+//   faFacebook,
+//   faTwitter,
+//   faInstagram
+// } from "@fortawesome/free-brands-svg-icons";
 
 import './Footer.css';
 
@@ -32,13 +32,13 @@ const Footer = () => (
       </div>
       <div className='footerIcons'>
         <div className='footerIcon'>
-          <FontAwesomeIcon icon={faInstagram} size="2x" />
+          {/* <FontAwesomeIcon icon={faInstagram} size="2x" /> */}
         </div>
         <div className='footerIcon'>
-          <FontAwesomeIcon icon={faFacebook} size="2x" />
+          {/* <FontAwesomeIcon icon={faFacebook} size="2x" /> */}
         </div>
         <div className='footerIcon'>
-          <FontAwesomeIcon icon={faTwitter} size="2x" />
+          {/* <FontAwesomeIcon icon={faTwitter} size="2x" /> */}
         </div>
       </div>
     </div>

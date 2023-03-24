@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import Countdown from 'react-countdown';
 import './Auction.css';
 import Infobox from './Sections/Infobox';
-
+import Result from './Result/Result';
 const Auction = (props) => {
   const {id} = useParams();
   const carz = props.vehicle.filter((cars) => cars.id == id);
@@ -50,6 +50,7 @@ const Auction = (props) => {
           <button className="view-appraisal-form">View Appraisal Form</button>
         </div>
       </div>
+      <Result/>
       {/* <div className="auction-biddings">
         {auctions}
       </div>       */}

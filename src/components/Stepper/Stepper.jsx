@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Uploader from './Uploader';
 
 import {
   Typography,
@@ -9,8 +10,8 @@ import {
   StepLabel,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { BsCardImage } from 'react-icons/bs';
-
+// import { BsCardImage } from 'react-icons/bs';
+import Uploadimage from './Uploader';
 import {useForm, FormProvider, useFormContext, Controller} from "react-hook-form";
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -35,7 +36,7 @@ const CarInformation = () => {
       name="firstName" 
       render={(field) => (
         <TextField
-            id="first-name"
+            id="car-maker"
             label="Maker"
             variant="outlined"
             placeholder="Enter Your Car Maker"
@@ -46,19 +47,29 @@ const CarInformation = () => {
           )}
         />  
           <TextField
-            id="last-name"
-            label="Last Name"
+            id="car-model"
+            label="Model"
             variant="outlined"
-            placeholder="Enter Your Last Name"
-            fullWidth
+            placeholder="Enter Your Car Model"
+            width="50%"
             margin="normal"
             name="lastName"
+            
           />
           <TextField
-            id="nick-name"
-            label="Nick Name"
+            id="car-year"
+            label="Year"
             variant="outlined"
-            placeholder="Enter Your Nick Name"
+            placeholder="Enter Your Car Year"
+            fullWidth
+            margin="normal"
+            name="nickName"
+          />
+          <TextField
+            id="car-mileage"
+            label="Mileage"
+            variant="outlined"
+            placeholder="Enter Your Car mileage"
             fullWidth
             margin="normal"
             name="nickName"
@@ -69,11 +80,10 @@ const CarInformation = () => {
 const CarImages = () => {
   const {control} = useFormContext();
 
-
   return(
-    <>
-
-    </>
+    <div>
+      <Uploader/>
+    </div>
   );
 };
 const AppraisalForm = () => {

@@ -15,7 +15,8 @@ export default function Result (props) {
               </div>
               <div className='resultPrice'>${auc.bid}</div>
               <div className='resultButtonDiv'>
-                <button className='resultButton'>SELL MY CAR</button>
+              <button className='resultButton' onClick={()=>{
+        props.selectBid(auc)}}>SELL MY CAR</button>
               </div>
             </div>
         );

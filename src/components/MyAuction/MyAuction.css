@@ -1,6 +1,6 @@
 .myAuctionHeader {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 3rem;
 }
 
 .myAuctionList {
@@ -10,32 +10,32 @@
 }
 
 .myAuctionItem {
-  width: 900px;
-  height: 180px;
+  width: 60rem;
+  height: 11rem;
   border-style: solid;
   border-color: #aeb6d6;
-  border-width: 1px;
-  border-radius: 12px;
+  border-width: 0.1rem;
+  border-radius: 0.8rem;
 }
 
 .myAuctionItemName {
-  margin-top: 22px;
-  margin-left: 346px;
+  margin-top: 1.3rem;
+  margin-left: 20.8rem;
 }
 
 .myAuctionItemPrice {
-  margin-top: 8px;
-  margin-left: 346px;
+  margin-top: 0.5rem;
+  margin-left: 21rem;
   display: flex;
 }
 
 .myAuctionItemPriceNumber {
-  margin-left: 381px;
+  margin-left: 23rem;
 }
 
 .myAuctionItemSteps {
-  margin-top: 27px;
-  margin-left: 346px;
+  margin-top: 1.5rem;
+  margin-left: 21rem;
   display: flex;
 }
 
@@ -45,14 +45,24 @@
   font-size: 10px;
 }
 
-.point {
-  width: 10px;
-  height: 10px;
+.point-ready {
+  width: 0.6rem;
+  height: 0.6rem;
   border-style: solid;
   border-color: #ff0000;
   border-width: 1px;
-  border-radius: 5px;
+  border-radius: 50%;
   background-color: #ff0000;
+}
+
+.point-not {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-style: solid;
+  border-color: #7d7d7d;
+  border-width: 1px;
+  border-radius: 50%;
+  background-color: #7d7d7d;
 }
 
 .line {
@@ -68,7 +78,7 @@
 }
 
 .myAuctionItemStepTime {
-  margin-top: 3px;
+  margin-top: 0.2rem;
   font-size: 10px;
   color: #ffa200;
   font-weight: bold;
@@ -76,4 +86,9 @@
 
 .myAuctionTotal {
   font-family: 'Mulish';
+}
+
+.status-note{
+  font-family: 'Mulish';
+  font-weight: 700%;
 }

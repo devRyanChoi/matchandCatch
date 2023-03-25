@@ -12,7 +12,7 @@ const Auction = (props) => {
   const EMPTY = "EMPTY";
   const SAVING ="SAVING";
   const {id} = useParams();
-  
+ 
   const { mode, transition, back } = useVisualMode(
     EMPTY
   );
@@ -23,7 +23,7 @@ const Auction = (props) => {
   
   const imageSrcs = props.state.images.filter((img) => img.vehicle_id == id)
   const image = imageSrcs[0];
-
+  console.log(props.state.transactions);
   function onBid (number, vehicleId, dealerId, price) {
     
     const auctions = {
@@ -36,17 +36,12 @@ const Auction = (props) => {
     props.makeBid(number, auctions);
   };
 
-  // const auctions = auction.map((auc) =>{
-  //   const findDealer = props.dealer.filter((deal) => deal.id == auc.dealer_id);
-  //   const dealerName = findDealer[0].name;
-  //     return(
-  //       <div className="bid-container">
-  //         <div>{dealerName}</div>
-  //         <div>${auc.bid}</div>
-  //         <div>BUTTON</div> 
-  //       </div>
-  //     )
-  // })
+  function onSelectBid(bidInfo){
+    const length = props.state.transactions.length;
+    const transaction ={id:length, vehicle_id: bidInfo.vehicle_id , dealer_id: bidInfo.dealer_id, price: bidInfo.bid}
+    props.selectBid(length, transaction);
+    
+  }
   if(!car)
   {
     return(<></>);
@@ -72,7 +67,7 @@ const Auction = (props) => {
         </div>
       </div>
       
-        <Result {...props} vehicleId={car.id}/>
+        <Result {...props} vehicleId={car.id} selectBid={onSelectBid}/>
       
 
       {/* {mode === EMPTY &&<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>} */}

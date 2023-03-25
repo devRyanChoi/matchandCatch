@@ -3,10 +3,10 @@ import './DealerAuction.css';
 import AuctionInfo from './AuctionInfo/AuctionInfo'
 
 export default function DealerAuction (props) {
-  if(!props.state.dealers){
+  if(!props.dealer){
     return(<></>);
   }
-  const completed = props.state.dealers.transactions.length;
+  const completed = props.dealer.transactions.length;
   return(
   <div className='pastAuctionTotal'>
     <div className='pastAuctionHeader'>

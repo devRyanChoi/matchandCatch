@@ -8,8 +8,8 @@ export default function PastAuctionInfo(props) {
   {
     return(<></>);
   }
-  const dealer = props.dealer[0];
-  console.log(dealer);
+  const dealer = props.dealer;
+
   const transaction = props.transaction.map((trans) => {
 
     if (dealer.id === trans.dealer_id){
@@ -55,10 +55,7 @@ export default function PastAuctionInfo(props) {
       </div>
       );
     }
-  });
-  
-  
-  
+  }); 
   return(
     <div className='pastAuctionList'>
       {transaction}

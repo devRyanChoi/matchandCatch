@@ -52,8 +52,12 @@
   border-style: solid;
   border-color: #aeb6d6;
   border-width: 1px;
-  border-radius: 2px;
+  border-radius: 0.3rem;
   padding: 10px 25px 10px 25px;
   background-color: #ffffff;
   color: #ff0000;
+}
+
+.resultButton:hover {
+  background-color: yellow;
 }

@@ -45,16 +45,6 @@ export default function useApplicationData(props) {
       setState({...state, auctions:[...state.auctions,auction]});
     });
   };
-  
-  function selectBid(id, transaction) {
-    console.log("trying to call db");
-    const transactions = [...state.transactions, transaction];
-    //Sends PUT Response to update the Appointment as well as updating remaing spots
-    return axios.put(`/api/transactions/${id}`, { transaction }).
-    then((result) =>   {
-      setState({...state, transactions});
-    });
-  };
 
-  return {state, setAuction, makeBid, selectBid};
+  return {state, setAuction, makeBid};
 }

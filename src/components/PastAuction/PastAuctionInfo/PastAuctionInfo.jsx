@@ -27,7 +27,7 @@ export default function PastAuctionInfo(props) {
               <div className='userName'>{dealer.name}</div>
               <div>Ranking 5</div>
             </div>
-            <div className='userPaied'>$30,000</div>
+            <div className='userPaied'>${trans.price}</div>
             <div className='userCheckIcon'>
               <FontAwesomeIcon icon={solid("circle-check")} style={{ color: "#198a3b", }} />
             </div>
@@ -35,7 +35,7 @@ export default function PastAuctionInfo(props) {
           <div className='pastAuctionDetail'>
           <div className='pastAuctionDetailLine'>
             <div>Selected price</div>
-            <div className='pastAuctionDetailLineResult'>$30,000</div>
+            <div className='pastAuctionDetailLineResult'>${trans.price}</div>
           </div>
           <div className='pastAuctionDetailLine'>
             <div>Average price</div>
@@ -47,7 +47,7 @@ export default function PastAuctionInfo(props) {
           </div>
           <div className='pastAuctionDetailLine'>
             <div>Year/ Brand/ Model</div>
-            <div className='pastAuctionDetailLineResult'>2020 Hyundai Elantra</div>
+            <div className='pastAuctionDetailLineResult'>{props.vehicle[trans.vehicle_id-1].year} {props.vehicle[trans.vehicle_id-1].maker} {props.vehicle[trans.vehicle_id-1].model}</div>
           </div>
           <div className='pastAuctionDetailLine'>
             <div>Participated dealers</div>

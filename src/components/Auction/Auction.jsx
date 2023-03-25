@@ -41,8 +41,8 @@ const Auction = (props) => {
 
   function onSelectBid(bidInfo){
     const length = props.state.auctions.length;
-    const transaction ={id:length, vehicle_id: bidInfo.vehicle_id , dealer_id: bidInfo.dealer_id, price: bidInfo.bid}
-    props.selectBid(length, transaction);
+    const auction ={id:length, vehicle_id: bidInfo.vehicle_id , dealer_id: bidInfo.dealer_id, price: bidInfo.bid, selected: true}
+    props.makeBid(length, auction);
     
   }
   

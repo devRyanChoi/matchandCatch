@@ -3,8 +3,8 @@ import React from 'react';
 import './MyAuction.css';
 import DealerAuction from './DealerAuction';
 export default function MyAuction(props) {
-  const currentUser = 1; //props.state.user;
-  const isAdmin = true;//props.state.admin;
+  const currentUser = 2; //props.state.user;
+  const isAdmin = false;//props.state.admin;
   
   if(isAdmin){
     return(

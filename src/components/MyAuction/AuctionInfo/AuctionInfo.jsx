@@ -37,10 +37,12 @@ export default function PastAuctionInfo(props) {
             <div>Selected price</div>
             <div className='pastAuctionDetailLineResult'>$30,000</div>
           </div>
-          <div className='pastAuctionDetailLine'>
+          {trans.selected ? (<></>) : (<div className='pastAuctionDetailLine'>
             <div>Average price</div>
             <div className='pastAuctionDetailLineResult'>$27,000</div>
-          </div>
+          </div>)
+          }
+          
           <div className='pastAuctionDetailLine'>
             <div>Date of transaction</div>
             <div className='pastAuctionDetailLineResult'>Jan 4, 2022</div>

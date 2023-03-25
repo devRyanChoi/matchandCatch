@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import StatusTag from './Help/StatusTag';
 import './Inventory.css';
+// import Filters from './Filter/Filter';
 
 const Inventory =(props) =>{
   if(!props.state.vehicles) {
@@ -32,7 +33,9 @@ const Inventory =(props) =>{
 
   return(
     <div className="inventory">
-      <div className="inventory-sidebar">We Will Place Filters</div>
+      <div className="inventory-sidebar">
+      {/* <Filters/> */}
+      </div>
       <div className="inventory-item">{imageSrc}</div>
     </div>
     

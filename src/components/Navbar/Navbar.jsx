@@ -25,7 +25,7 @@ const Navbar = (props) => {
       <div className="app__navbar-login">
         <a href="/myAuction" className="p__opensans">My Auction</a>
         <div/>
-        <a href="#" className='p__opensans'>Sign In</a>
+        <a href="/signin" className='p__opensans'>Sign In</a>
       </div>
       <div className="app__navbar-samllscreen">
         <GiHamburgerMenu color='#fff' fontSize={27} onClick={() => setToggleMenu(true)} />

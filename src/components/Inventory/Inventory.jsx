@@ -7,9 +7,11 @@ const Inventory =(props) =>{
     return(<></>);
   }
   const imageSrc = props.state.vehicles.map((imgur) =>{
+    if(imgur.sell_status){
+      return(<></>);
+    }
     const imageSrcs = props.state.images.filter((img) => img.vehicle_id == imgur.id)
     const image = imageSrcs[0];
-    console.log(image);
     if(!image){
       return(<></>);
     }

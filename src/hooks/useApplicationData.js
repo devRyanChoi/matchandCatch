@@ -11,7 +11,7 @@ export default function useApplicationData(props) {
     images: [],
     status: false,
     admin: false,
-    users: 2
+    users: 0
   });
 
   //axios.post(url, )
@@ -56,5 +56,15 @@ export default function useApplicationData(props) {
     });
   };
 
-  return {state, setAuction, makeBid, selectBid};
+  function selectVehicle(id, auction) {
+  
+    const auctions = [...state.auctions, auction];
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    return axios.post(`/api/vehicles/select/${id}`, { auction }).
+    then((result) =>   {
+      setState({...state, auctions:[...state.auctions,auction]});
+    });
+  };
+
+  return {state, setAuction, makeBid, selectBid, selectVehicle};
 }

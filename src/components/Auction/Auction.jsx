@@ -43,6 +43,7 @@ const Auction = (props) => {
 
     const auction ={id:bidInfo.id, vehicle_id: bidInfo.vehicle_id , dealer_id: bidInfo.dealer_id, price: bidInfo.price, selected: true}
     props.selectBid(bidInfo.id, auction);
+    props.selectVehicle(bidInfo.id, auction);
   }
   
   return (

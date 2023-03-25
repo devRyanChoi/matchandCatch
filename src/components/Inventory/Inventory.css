@@ -13,6 +13,7 @@
 .inventory-item{
   display:flex;
   flex-wrap: wrap;
+  
   width:90%;
   height:100%;
 }
@@ -24,6 +25,7 @@
 }
 
 .inventory-item-image{
+  border-radius: 5px;
   width:100%;
   height:80%;
 }

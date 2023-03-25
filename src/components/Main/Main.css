@@ -12,6 +12,7 @@
 }
 
 .app__header-img img {
+  border-radius: 10px;
   width: 80%;
 }
 

@@ -29,7 +29,7 @@ export default function PastAuctionInfo(props) {
             </div>
             <div className='userPaied'>${trans.price}</div>
             <div className='userCheckIcon'>
-              <CheckMark done={props.done}/>
+              <CheckMark done={trans.selected}/>
             </div>
           </div>
           <div className='pastAuctionDetail'>

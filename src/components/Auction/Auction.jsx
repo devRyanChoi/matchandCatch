@@ -27,7 +27,6 @@ const Auction = (props) => {
   
   const imageSrcs = props.state.images.filter((img) => img.vehicle_id == id)
   const image = imageSrcs[0];
-  console.log(props.state.transactions);
   function onBid (number, vehicleId, dealerId, price) {
     
     const auctions = {
@@ -41,7 +40,7 @@ const Auction = (props) => {
   };
 
   function onSelectBid(bidInfo){
-    const length = props.state.transactions.length;
+    const length = props.state.auctions.length;
     const transaction ={id:length, vehicle_id: bidInfo.vehicle_id , dealer_id: bidInfo.dealer_id, price: bidInfo.bid}
     props.selectBid(length, transaction);
     

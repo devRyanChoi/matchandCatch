@@ -9,7 +9,6 @@ export default function useApplicationData(props) {
     dealers: [],
     auctions: [],
     images: [],
-    transactions:[],
     status: false,
     admin: false,
     users: 0
@@ -25,7 +24,6 @@ export default function useApplicationData(props) {
       axios.get("/api/dealers"),
       axios.get("/api/images"),
       axios.get("/api/sellers"),
-      axios.get("/api/transactions"),
     ]).then((all) => {
       setState((prev) => ({
         ...prev,
@@ -34,7 +32,6 @@ export default function useApplicationData(props) {
         dealers: all[2].data,
         images: all[3].data,
         sellers: all[4].data,
-        transactions: all[5].data
       }));
     });
   }, []);

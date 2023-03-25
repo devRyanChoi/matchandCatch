@@ -9,7 +9,9 @@ export default function PastAuctionInfo(props) {
     return(<></>);
   }
   const dealers = props.dealer;
-  const transaction = props.transaction.map((trans) => {
+  
+  const transactions = props.auctions.filter((auc) => auc.selected == true);
+  const transaction = transactions.map((trans) => {
     const dealers = props.dealer.filter((dealerId) => dealerId.id == trans.dealer_id);
     const dealer = dealers[0];
     if (dealer.id === trans.dealer_id){

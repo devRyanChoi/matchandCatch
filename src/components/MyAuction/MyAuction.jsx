@@ -8,7 +8,7 @@ export default function MyAuction(props) {
   
   if(isAdmin){
     return(
-    <DealerAuction dealer={props.state.dealers[0]} transaction={props.state.transactions} vehicle={props.state.vehicles} auction={props.state.auctions}/>
+    <DealerAuction dealer={props.state.dealers[0]} auction={props.state.auctions} vehicle={props.state.vehicles}/>
     )
   }
 

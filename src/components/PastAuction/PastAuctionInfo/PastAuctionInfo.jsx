@@ -19,7 +19,7 @@ export default function PastAuctionInfo(props) {
       
         <div className='pastAuctionItem'>
           <div className='pastAuctionCarImage'>
-            <img />
+            <img/>
           </div>
           <div className='pastAuctionTag'>
             <div className='userAvatar'></div>

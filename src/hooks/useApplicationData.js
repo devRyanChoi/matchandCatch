@@ -11,7 +11,7 @@ export default function useApplicationData(props) {
     images: [],
     status: false,
     admin: false,
-    users: 0
+    users: 2
   });
 
   //axios.post(url, )
@@ -37,14 +37,24 @@ export default function useApplicationData(props) {
   }, []);
 
   function makeBid(id, auction) {
-
+  
     const auctions = [...state.auctions, auction];
     //Sends PUT Response to update the Appointment as well as updating remaing spots
-    return axios.put(`/api/auctions/${id}`, { auction }).
+    return axios.put(`/api/auctions/bid/${id}`, { auction }).
     then((result) =>   {
       setState({...state, auctions:[...state.auctions,auction]});
     });
   };
 
-  return {state, setAuction, makeBid};
+  function selectBid(id, auction) {
+  
+    const auctions = [...state.auctions, auction];
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    return axios.post(`/api/auctions/select/${id}`, { auction }).
+    then((result) =>   {
+      setState({...state, auctions:[...state.auctions,auction]});
+    });
+  };
+
+  return {state, setAuction, makeBid, selectBid};
 }

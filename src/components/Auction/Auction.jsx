@@ -41,9 +41,8 @@ const Auction = (props) => {
 
   function onSelectBid(bidInfo){
 
-    const length = props.state.auctions.length;
-    const auction ={id:length, vehicle_id: bidInfo.vehicle_id , dealer_id: bidInfo.dealer_id, price: bidInfo.price, selected: true}
-    props.makeBid(length, auction);
+    const auction ={id:bidInfo.id, vehicle_id: bidInfo.vehicle_id , dealer_id: bidInfo.dealer_id, price: bidInfo.price, selected: true}
+    props.selectBid(bidInfo.id, auction);
   }
   
   return (
@@ -66,11 +65,10 @@ const Auction = (props) => {
           <button className="view-appraisal-form">View Appraisal Form</button>
         </div>
       </div>
-      
-        <Result {...props} vehicleId={car.id} selectBid={onSelectBid}/>
+      {props.state.admin ? (<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>) : (<Result {...props} vehicleId={car.id} selectBid={onSelectBid}/>)}
       
 
-      {/* {mode === EMPTY &&<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>} */}
+      
    
     </div>
   );

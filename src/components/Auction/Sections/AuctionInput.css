@@ -1,0 +1,16 @@
+.input-container{
+  width:40rem;
+  height:5rem;
+  display:flex;
+  align-items: center;
+  margin-left:5rem
+}
+
+.input-label{
+
+  font-family: 'Open Sans';
+}
+
+.input-container-box{
+
+}

@@ -3,12 +3,11 @@ import React from 'react';
 import './MyAuction.css';
 import DealerAuction from './DealerAuction';
 export default function MyAuction(props) {
-  const currentUser = 2; //props.state.user;
-  const isAdmin = false;//props.state.admin;
-  
+  const currentUser = props.state.users;
+  const isAdmin = props.state.admin;
   if(isAdmin){
     return(
-    <DealerAuction dealer={props.state.dealers[0]} auction={props.state.auctions} vehicle={props.state.vehicles}/>
+    <DealerAuction dealer={props.state.dealers[currentUser]} auction={props.state.auctions} vehicle={props.state.vehicles}/>
     )
   }
 

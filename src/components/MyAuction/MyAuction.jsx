@@ -3,11 +3,12 @@ import React from 'react';
 import './MyAuction.css';
 import DealerAuction from './DealerAuction';
 export default function MyAuction(props) {
-  const currentUser = 2; //props.state.user;
+  const currentUser = 1; //props.state.user;
   const isAdmin = true;//props.state.admin;
+  
   if(isAdmin){
     return(
-    <DealerAuction dealer={props.state.dealers[0]} transaction={props.state.transactions} vehicle={props.state.vehicles}/>
+    <DealerAuction dealer={props.state.dealers[0]} transaction={props.state.transactions} vehicle={props.state.vehicles} auction={props.state.auctions}/>
     )
   }
 
@@ -18,14 +19,13 @@ export default function MyAuction(props) {
       
         const auctions = props.state.auctions.filter((auc) => auc.vehicle_id == vehicle.id)
         var maxBid = 0;
-        console.log(auctions.length);
+
         if(auctions.length === 1) {
-          maxBid = auctions.bid;
+          maxBid = auctions.price;
         } else if (auctions.length > 1) {
-          maxBid = Math.max(...auctions.map(x => x.bid))
+          maxBid = Math.max(...auctions.map(x => x.price))
         }
 
-  
         return (
           <a href={'/inventory/' + vehicle.id} className='myAuctionList'>
           

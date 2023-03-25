@@ -1,21 +1,23 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
-
+import CheckMark from './CheckMark';
 
 export default function PastAuctionInfo(props) {
   if(!props.dealer)
   {
     return(<></>);
   }
+  
   const dealer = props.dealer;
-
-  const transaction = props.transaction.map((trans) => {
-
+  const auction = props.auction.map((trans) => {
+    
     if (dealer.id === trans.dealer_id){
+      const vehicleId = trans.vehicle_id;
+      console.log();
       return(
       
-        <div className='pastAuctionItem'>
+        <a href={'/inventory/'} className='pastAuctionItem'>
           <div className='pastAuctionCarImage'>
             <img />
           </div>
@@ -25,9 +27,9 @@ export default function PastAuctionInfo(props) {
               <div className='userName'>{dealer.name}</div>
               <div>Ranking 5</div>
             </div>
-            <div className='userPaied'>$30,000</div>
+            <div className='userPaied'>${trans.price}</div>
             <div className='userCheckIcon'>
-              <FontAwesomeIcon icon={solid("circle-check")} style={{ color: "#198a3b", }} />
+              <CheckMark done={props.done}/>
             </div>
           </div>
           <div className='pastAuctionDetail'>
@@ -45,20 +47,22 @@ export default function PastAuctionInfo(props) {
           </div>
           <div className='pastAuctionDetailLine'>
             <div>Year/ Brand/ Model</div>
-            <div className='pastAuctionDetailLineResult'>2020 Hyundai Elantra</div>
+            <div className='pastAuctionDetailLineResult'>
+              <p>{props.vehicle[vehicleId-1].year} {props.vehicle[vehicleId-1].maker} {props.vehicle[vehicleId-1].model}</p>
+            </div>
           </div>
           <div className='pastAuctionDetailLine'>
             <div>Participated dealers</div>
             <div className='pastAuctionDetailLineResult'>2</div>
           </div>
         </div>
-      </div>
+      </a>
       );
     }
   }); 
   return(
     <div className='pastAuctionList'>
-      {transaction}
+      {auction}
     </div>
   )
   

@@ -20,6 +20,10 @@ const Auction = (props) => {
 
   const auction = props.state.auctions.filter((auc) => auc.vehicle_id == id)
   const car = carz[0];
+  if(!car)
+  {
+    return(<></>);
+  }
   
   const imageSrcs = props.state.images.filter((img) => img.vehicle_id == id)
   const image = imageSrcs[0];
@@ -30,7 +34,7 @@ const Auction = (props) => {
       id: number,
       vehicle_id: vehicleId, 
       dealer_id: dealerId, 
-      bid: Number(price), 
+      price: Number(price), 
       selected: false
     };
     props.makeBid(number, auctions);
@@ -42,10 +46,7 @@ const Auction = (props) => {
     props.selectBid(length, transaction);
     
   }
-  if(!car)
-  {
-    return(<></>);
-  }
+  
   return (
     <div className="auction-main">
       <div className="active-auction">

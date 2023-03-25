@@ -22,7 +22,7 @@ const Inventory =(props) =>{
             <div className="info-content">{imgur.year}</div>
             <div className="info-content">{imgur.maker}</div>
             <div className="info-content">{imgur.model}</div>
-            
+            <div className="info-milage">{imgur.milage} Km</div>
           </div>
       </a>
     );

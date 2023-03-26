@@ -1,19 +1,24 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import { SubHeading } from '..';
 import { images } from '../../constants';
 import './Main.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
-const Main = () => (
+
+export default function Main () {
+  const navigate = useNavigate();
+  const handleClick = () => navigate('/stepper');
+return(
   <div>
     <div className='app__header app__wrapper section__padding' id='home'>
       <div className='app__wrapper_info'>
         <SubHeading title="We make selling your car easy, fast, and fair." />
         <h1 className='app__header-h1'>Are you looking to sell your car?</h1>
         <p className='p__opensans' styLe={{ margin: '2rem 0' }}></p>
-        <button type="button" className='custom__button'>Sell your car</button>
+        <button type="button" className='custom__button' onClick={()=>{handleClick()}}>Sell your car</button>
       </div>
 
       <div className="app__wrapper_img">
@@ -113,7 +118,5 @@ const Main = () => (
       </div>
     </div>
   </div>
-
-);
-
-export default Main;
+)
+}

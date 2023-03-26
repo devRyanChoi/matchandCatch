@@ -1,14 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Transactions.css';
-import JSConfetti from "js-confetti";
 import Confetti from 'react-confetti'
 export default function Transactions (props) {
 const navigate = useNavigate();
-const {id} = useParams();
 const handleClick = () => navigate('/');
-
+const {id} = useParams();
 
 const auction = props.state.auctions.filter((auc) => auc.id == id);
   

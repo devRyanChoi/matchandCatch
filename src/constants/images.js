@@ -20,6 +20,11 @@ import award05 from '../assets/award05.png';
 import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import mc from '../assets/mc.png';
+import sfront from '../assets/sfront.png';
+import srear from '../assets/srear.png';
+import spassengerSide from '../assets/spassengerSide.png';
+import sdriverSide from '../assets/sdriverSide.png';
+import sinterior from '../assets/sinterior.png';
 
 export default {
   bg,
@@ -44,4 +49,9 @@ export default {
   sign,
   quote,
   mc,
+  sdriverSide,
+  spassengerSide,
+  srear,
+  sfront,
+  sinterior
 };

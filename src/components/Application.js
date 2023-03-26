@@ -28,7 +28,7 @@ export {
 
 
 export default function Application(props) {
-  
+  console.log(props.state.images);
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
       <Route exact path='/' element={<Main/>}></Route>

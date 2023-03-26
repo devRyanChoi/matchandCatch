@@ -13,7 +13,7 @@
   border-style: solid;
   border-color: #aeb6d6;
   border-width: 1px;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
 }
 
 .pastAuctionTag {
@@ -99,5 +99,12 @@ p {
 }
 
 .pastAuctionCarImage{
+  display:flex;
   height:43%;
+  align-items: center;
+}
+.pastAuctionRealCarImage{
+  margin-left: 6%;
+  width:87.9%;
+  border-radius: 1rem;
 }

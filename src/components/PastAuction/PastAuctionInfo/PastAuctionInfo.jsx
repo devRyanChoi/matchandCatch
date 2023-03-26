@@ -15,11 +15,14 @@ export default function PastAuctionInfo(props) {
     const dealers = props.dealer.filter((dealerId) => dealerId.id == trans.dealer_id);
     const dealer = dealers[0];
     if (dealer.id === trans.dealer_id){
+      // console.log(props.image);
+      const imageSrc = props.image[trans.vehicle_id-1];
+      console.log(imageSrc)
       return(
       
         <div className='pastAuctionItem'>
           <div className='pastAuctionCarImage'>
-            <img/>
+            <img className='pastAuctionRealCarImage' src={imageSrc.source}/>
           </div>
           <div className='pastAuctionTag'>
             <div className='userAvatar'></div>

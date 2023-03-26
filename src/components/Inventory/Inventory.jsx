@@ -7,6 +7,7 @@ const Inventory =(props) =>{
   if(!props.state.vehicles) {
     return(<></>);
   }
+  
   const imageSrc = props.state.vehicles.map((imgur) =>{
     if(imgur.sell_status){
       return(<></>);

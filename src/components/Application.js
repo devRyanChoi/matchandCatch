@@ -10,7 +10,7 @@ import Main from './Main/Main';
 import PastAuction from './PastAuction/PastAuction';
 import MyAuction from './MyAuction/MyAuction';
 import { Routes, Route } from 'react-router-dom';
-import{useState} from 'react';
+import {useState} from 'react';
 import Signin from './Signin/Signin';
 import Stepper from './Stepper/Stepper';
 export {

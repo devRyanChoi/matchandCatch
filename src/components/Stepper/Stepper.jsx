@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Uploader from './Uploader/Uploader';
-
 import {
   Typography,
   TextField,
@@ -10,9 +8,13 @@ import {
   StepLabel,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+// import ImageUploader from 'react-images-upload';
 // import { BsCardImage } from 'react-icons/bs';
-import Uploadimage from './Uploader/Uploader';
+// import Uploadimage from './Uploader/Uploader1';
 import {useForm, FormProvider, useFormContext, Controller} from "react-hook-form";
+import Uploader1 from './Uploader/Uploader1'
+
+
 const useStyles = makeStyles((theme) => ({
   button: {
     marginRight: theme.spacing(1),
@@ -78,11 +80,10 @@ const CarInformation = () => {
   );
 };
 const CarImages = () => {
-  const {control} = useFormContext();
 
   return(
     <div>
-      <Uploader/>
+      <Uploader1/>
     </div>
   );
 };

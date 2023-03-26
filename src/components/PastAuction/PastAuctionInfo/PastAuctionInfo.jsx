@@ -27,7 +27,7 @@ export default function PastAuctionInfo(props) {
               <div className='userName'>{dealer.name}</div>
               <div>Ranking 5</div>
             </div>
-            <div className='userPaied'>${trans.price}</div>
+            <div className='userPaied'>${trans.price.toLocaleString()}</div>
             <div className='userCheckIcon'>
               <FontAwesomeIcon icon={solid("circle-check")} style={{ color: "#198a3b", }} />
             </div>
@@ -35,7 +35,7 @@ export default function PastAuctionInfo(props) {
           <div className='pastAuctionDetail'>
           <div className='pastAuctionDetailLine'>
             <div>Selected price</div>
-            <div className='pastAuctionDetailLineResult'>${trans.price}</div>
+            <div className='pastAuctionDetailLineResult'>${trans.price.toLocaleString()}</div>
           </div>
           <div className='pastAuctionDetailLine'>
             <div>Average price</div>

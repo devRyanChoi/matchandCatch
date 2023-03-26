@@ -5,17 +5,19 @@ import DealerAuction from './DealerAuction';
 export default function MyAuction(props) {
   const currentUser = props.state.users;
   const isAdmin = props.state.admin;
+  console.log(currentUser);
   if(isAdmin){
     return(
-    <DealerAuction dealer={props.state.dealers[currentUser]} auction={props.state.auctions} vehicle={props.state.vehicles}/>
+    <DealerAuction dealer={props.state.dealers[currentUser - 1]} auction={props.state.auctions} vehicle={props.state.vehicles}/>
     )
   }
 
   else {
     
     const ownedVehicles = props.state.vehicles.map((vehicle) =>{ 
-      if (vehicle.seller_id === currentUser) {
       
+      if (vehicle.seller_id === currentUser) {
+        console.log("I have this car")
         const auctions = props.state.auctions.filter((auc) => auc.vehicle_id == vehicle.id)
         var maxBid = 0;
 
@@ -34,7 +36,7 @@ export default function MyAuction(props) {
         </div>
         <div className='myAuctionItemPrice'>
           <div>Best price:</div>
-          <div className='myAuctionItemPriceNumber'>${maxBid}</div>
+          <div className='myAuctionItemPriceNumber'>${maxBid.toLocaleString()}</div>
         </div>
         <div className='myAuctionItemSteps'>
           <div className='myAuctionItemStep'>

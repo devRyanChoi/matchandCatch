@@ -11,29 +11,32 @@ export const Register = (props) => {
 
     const [email, setEmail] = useState('');
     const [validEmail, setValidEmail] = useState(false);
-    const [emailFocus, setEmailFocus] = useState(false);
+
 
     const [pass, setPass] = useState('');
     const [validPass, setValidPass] = useState(false);
-    const [passFocus, setPassFocus] = useState(false);
+
     
     const [matchPass,setMatchPass] = useState('');
     const [validMatch,setValidMatch ] = useState('');
 
-    const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState(false);
-    function validation(emailAddres, passWord, passWordConfirm) {
-        //if pa === passWord;
-        //if em === emailAddress.
-        //name
-        //setUser = 
-        props.state.sellers.map((user) => {
-            //if user.email == userInputEmail
-            //if user.pass == userInputPassword
-            // user.id
-            // props.state.user = setState(user: user.id);
-        })
-    }
+    // function validation(emailAddres, passWord, passWordConfirm) {
+    //     if (em === emailAddress){
+    //         if (em === emailAddress){
+    //             name = " "
+    //             setUser = ""
+    //             props.state.sellers.map((user) => {
+    //                 if user.email == userInputEmail
+    //                 if user.pass == userInputPassword
+    //                 user.id
+    //             props.state.user = setState(user: user.id);
+    //         }
+    //     }
+    // }
+
+
+
+
 
     useEffect(() => {
         setValidEmail(EMAIL_REGEX.test(email));
@@ -44,42 +47,42 @@ export const Register = (props) => {
         setValidMatch(pass === matchPass);
     }, [pass, matchPass])
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const v1 = EMAIL_REGEX.test(email);
-        const v2 = PASS_REGEX.test(pass);
-        if (!v1 || !v2) {
-            setErrMsg("Invalid Entry");
-            return;
-        } 
-        try {
-            const response = await axios.post(REGISTER_URL,
-                JSON.stringify({ email, pass }),
-                {
-                    headers: { 'Content-Type': 'application/json' },
-                    withCredentials: true
-                }
-            );
-            console.log(response?.data);
-            console.log(response?.accessToken);
-            console.log(JSON.stringify(response))
-            setSuccess(true);
-            //clear state and controlled inputs
-            //need value attrib on inputs for this
-            setEmail('');
-            setPass('');
-            setMatchPass('');
-        } catch (err) {
-            if (!err?.response) {
-                setErrMsg('No Server Response');
-            } else if (err.response?.status === 409) {
-                setErrMsg('Username Taken');
-            } else {
-                setErrMsg('Registration Failed')
-            }
-            useRef.current.focus();
-        }
-    }
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     const v1 = EMAIL_REGEX.test(email);
+    //     const v2 = PASS_REGEX.test(pass);
+    //     if (!v1 || !v2) {
+    //         setErrMsg("Invalid Entry");
+    //         return;
+    //     } 
+    //     try {
+    //         const response = await axios.post(REGISTER_URL,
+    //             JSON.stringify({ email, pass }),
+    //             {
+    //                 headers: { 'Content-Type': 'application/json' },
+    //                 withCredentials: true
+    //             }
+    //         );
+    //         console.log(response?.data);
+    //         console.log(response?.accessToken);
+    //         console.log(JSON.stringify(response))
+    //         setSuccess(true);
+    //         //clear state and controlled inputs
+    //         //need value attrib on inputs for this
+    //         setEmail('');
+    //         setPass('');
+    //         setMatchPass('');
+    //     } catch (err) {
+    //         if (!err?.response) {
+    //             setErrMsg('No Server Response');
+    //         } else if (err.response?.status === 409) {
+    //             setErrMsg('Username Taken');
+    //         } else {
+    //             setErrMsg('Registration Failed')
+    //         }
+    //         useRef.current.focus();
+    //     }
+    // }
 
     return (
         <div className="auth-form-container">

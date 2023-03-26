@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Uploader from './Uploader';
+import Uploader from './Uploader/Uploader';
 
 import {
   Typography,
@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 // import { BsCardImage } from 'react-icons/bs';
-import Uploadimage from './Uploader';
+import Uploadimage from './Uploader/Uploader';
 import {useForm, FormProvider, useFormContext, Controller} from "react-hook-form";
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -337,9 +337,7 @@ const LinaerStepper = () => {
               />                              
             );
           }
-          // if (isStepSkipped(index)) {
-          //   stepProps.completed = false;
-          // }
+
           return (
             <Step {...stepProps} key={index}>
               <StepLabel {...labelProps}>{step}</StepLabel>
@@ -357,29 +355,16 @@ const LinaerStepper = () => {
         <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit(onSubmit)}>{getStepContent(activeStep)}
             
-                  <Button
-                    className={classes.button}
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
-                  >
-                  back
-                </Button>
+        <Button
+          className={classes.button}
+          disabled={activeStep === 0}
+          onClick={handleBack}
+        >
+        back
+        </Button>
 
-                {/* {isStepOptional(activeStep) 
-                && 
-                (
-                  <Button
-                    className={classes.button}
-                    variant="contained"
-                    color="primary"
-                    onClick={handleSkip}
-                  >
-                    skip
-                  </Button>
-                )} */}
-
-                <Button
-                  className={classes.button}
+        <Button
+        className={classes.button}
                   variant="contained"
                   color="primary"
                   onClick={handleNext}

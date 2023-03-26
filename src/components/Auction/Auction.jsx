@@ -37,6 +37,7 @@ const Auction = (props) => {
       selected: false
     };
     props.makeBid(number, auctions);
+    
   };
 
   function onSelectBid(bidInfo){
@@ -67,10 +68,6 @@ const Auction = (props) => {
         </div>
       </div>
       {props.state.admin ? (<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>) : (<Result {...props} vehicleId={car.id} selectBid={onSelectBid}/>)}
-      
-
-      
-   
     </div>
   );
 }

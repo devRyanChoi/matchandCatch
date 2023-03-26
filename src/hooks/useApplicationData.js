@@ -11,7 +11,7 @@ export default function useApplicationData(props) {
     images: [],
     status: false,
     admin: false,
-    users: 0
+    users: 1
   });
 
   //axios.post(url, )

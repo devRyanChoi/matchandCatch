@@ -15,11 +15,14 @@ export default function PastAuctionInfo(props) {
     const dealers = props.dealer.filter((dealerId) => dealerId.id == trans.dealer_id);
     const dealer = dealers[0];
     if (dealer.id === trans.dealer_id){
+      // console.log(props.image);
+      const imageSrc = props.image[trans.vehicle_id-1];
+      console.log(imageSrc)
       return(
       
         <div className='pastAuctionItem'>
           <div className='pastAuctionCarImage'>
-            <img/>
+            <img className='pastAuctionRealCarImage' src={imageSrc.source}/>
           </div>
           <div className='pastAuctionTag'>
             <div className='userAvatar'></div>
@@ -27,7 +30,7 @@ export default function PastAuctionInfo(props) {
               <div className='userName'>{dealer.name}</div>
               <div>Ranking 5</div>
             </div>
-            <div className='userPaied'>${trans.price}</div>
+            <div className='userPaied'>${trans.price.toLocaleString()}</div>
             <div className='userCheckIcon'>
               <FontAwesomeIcon icon={solid("circle-check")} style={{ color: "#198a3b", }} />
             </div>
@@ -35,7 +38,7 @@ export default function PastAuctionInfo(props) {
           <div className='pastAuctionDetail'>
           <div className='pastAuctionDetailLine'>
             <div>Selected price</div>
-            <div className='pastAuctionDetailLineResult'>${trans.price}</div>
+            <div className='pastAuctionDetailLineResult'>${trans.price.toLocaleString()}</div>
           </div>
           <div className='pastAuctionDetailLine'>
             <div>Average price</div>

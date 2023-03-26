@@ -1,0 +1,84 @@
+.transactions{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.confetti{
+  position: fixed;
+  z-index: -1;
+}
+
+.transaction-container {
+  width: 45rem;
+  height: 32rem;
+  border: solid;
+  border-radius: 1.2rem;
+  border-color: #aeb6d6;
+  border-width: 1px;
+  box-shadow: 10px 10px 5px rgb(235, 235, 235);
+}
+.transaction-header{
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom:4rem;
+  font-weight: 500;
+  font-family: "Open Sans";
+}
+.dealer-avatar {
+  margin-top: -4rem;
+  width:8rem;
+  height:8rem;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: #448D53;
+  background-color: #448D53;
+}
+
+.transaction-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dealer-name{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: "Open Sans";
+  font-weight: 500;
+}
+
+.price-tag{
+  margin-top: 0.7rem;
+  font-size:2rem;
+  font-family: "Open Sans";
+  color:red;
+}
+.transaction-detail{
+  margin-top: 0.7rem;
+  font-size:1.2rem;
+  font-weight: 600;
+  font-family: "Open Sans";
+  margin-bottom:1rem;
+  margin-left:3.5rem
+}
+.transaction-detail-container{
+  margin-left:3.5rem;
+  margin-top:0rem;
+
+  width:38rem;
+  height:15rem;
+  border: solid;
+  border-radius: 0.8rem;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #D2DBEB;
+}
+
+.home-button{
+
+}
+
+.home-button-container{
+  display:flex;
+  align-items: center;
+}

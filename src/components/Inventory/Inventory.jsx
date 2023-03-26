@@ -7,6 +7,7 @@ const Inventory =(props) =>{
   if(!props.state.vehicles) {
     return(<></>);
   }
+  
   const imageSrc = props.state.vehicles.map((imgur) =>{
     if(imgur.sell_status){
       return(<></>);
@@ -25,7 +26,7 @@ const Inventory =(props) =>{
             <div className="info-content">{imgur.year}</div>
             <div className="info-content">{imgur.maker}</div>
             <div className="info-content">{imgur.model}</div>
-            <div className="info-milage">{imgur.milage} Km</div>
+            <div className="info-milage">{imgur.milage.toLocaleString()} Km</div>
           </div>
       </a>
     );

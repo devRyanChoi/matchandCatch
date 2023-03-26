@@ -10,6 +10,7 @@ import Main from './Main/Main';
 import PastAuction from './PastAuction/PastAuction';
 import MyAuction from './MyAuction/MyAuction';
 import { Routes, Route } from 'react-router-dom';
+import Transactions from './Transactions/Transactions';
 import{useState} from 'react';
 export {
   SubHeading,
@@ -27,14 +28,14 @@ export {
 
 
 export default function Application(props) {
-  
+  console.log(props.state.images);
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
       <Route exact path='/' element={<Main/>}></Route>
       <Route exact path='/pastAuction' element={<PastAuction {...props}/>}></Route>
       <Route exact path='/myAuction' element={<MyAuction {...props} />}></Route>
       <Route exact path='/inventory/' element={<Inventory {...props}/>}></Route>
-      
+      <Route exact path='/transactions/:id' element={<Transactions {...props}/>}></Route>
       <Route exact path='/inventory/:id' element={<Auction {...props}/>}></Route>
     
     </Routes>

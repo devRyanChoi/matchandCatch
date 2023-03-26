@@ -3,7 +3,7 @@ import './Signin.css';
 import { Login } from "./Login";
 import { Register } from "./Register";
 
-function App() {
+export default function App(props) {
   const [currentForm, setCurrentForm] = useState('login');
 
   const toggleForm = (formName) => {
@@ -13,10 +13,8 @@ function App() {
   return (
     <div className="App">
       {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} seller={props.seller} setUsers={props.setUsers}/> : <Register onFormSwitch={toggleForm} />
       }
     </div>
   );
 }
-
-export default App;

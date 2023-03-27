@@ -1,0 +1,15 @@
+.stepper-cf{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.cf-img img {
+  /* margin: 0 auto; */
+  /* display: center; */
+  width: 30rem;
+  height: 20rem;
+}
+.cf-desc{
+  text-align: center;
+}

@@ -1,87 +1,74 @@
+import React,{useState, useEffect} from 'react';
+// import { Navigate, useNavigate } from 'react-router-dom';
+// import axios from '../../Signin/api/axios';
+import './Uploader1.css';
 
 
-import React, { useState } from "react";
-import "./Uploader1.css";
-
-const Uploader1 = () => {
-  const [selectedImages, setSelectedImages] = useState([]);
-
-  const onSelectFile = (event) => {
-    const selectedFiles = event.target.files;
-    const selectedFilesArray = Array.from(selectedFiles);
-
-    const imagesArray = selectedFilesArray.map((file) => {
-      return URL.createObjectURL(file);
-    });
-
-    setSelectedImages((previousImages) => previousImages.concat(imagesArray));
-
-    // FOR BUG IN CHROME
-    event.target.value = "";
-  };
-
-  function deleteHandler(image) {
-    setSelectedImages(selectedImages.filter((e) => e !== image));
-    URL.revokeObjectURL(image);
-  }
+export default function Uploader1() {
+    const [selectedImage, setSelectedImage] = useState();
+ 
+    // This function will be triggered when the file field change
+    const imageChange = (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+          setSelectedImage(e.target.files[0]);
+        }
+    };
+ 
+    const onSubmit = (e) => {
+        e.preventDefault() 
+        alert(URL.createObjectURL(selectedImage))
+ 
+    }
+     
+    // This function will be triggered when the "Remove This Image" button is clicked
+    const removeSelectedImage = () => {
+        setSelectedImage();
+    };
 
   return (
-    <section>
-      <div>
-        <p>Add images</p>
+    <>
+      <div className="container" >
+        <h1 className='ct-title'> ReactJS Show Image Preview before Uploading </h1>
+        <div className="row">
+            <form onSubmit={ onSubmit } className="form-inline">
+                <div className="form-group">
+                <label>Choose File to Upload: </label>
+                <input type="file" className="form-control" onChange={imageChange} accept="image/*"/>
+                </div> <br/>
+                <button type="submit" className="btn-success" >Upload File</button>
+            </form>
+ 
+        {selectedImage && (
+          <div style={styles.preview}>
+            <img
+              src={URL.createObjectURL(selectedImage)}
+              style={styles.image}
+              alt="Thumb"
+            />
+            <button onClick={removeSelectedImage} style={styles.delete}>
+              Remove This Image
+            </button>
+          </div>
+        )}
+        </div>
       </div>
-      <label>
-        + Add Images
-        <br />
-        <span>up to 10 images</span>
-        <input
-          type="file"
-          name="images"
-          onChange={onSelectFile}
-          multiple
-          accept="image/png , image/jpeg, image/webp"
-        />
-      </label>
-      <br />
-
-      <input type="file" multiple />
-
-      {selectedImages.length > 0 &&
-        (selectedImages.length > 10 ? (
-          <p className="error">
-            You can't upload more than 5 images! <br />
-            <span>
-              please delete <b> {selectedImages.length - 4} </b> of them{" "}
-            </span>
-          </p>
-        ) : (
-          <button
-            className="upload-btn"
-            onClick={() => {
-              console.log(selectedImages);
-            }}
-          >
-            UPLOAD {selectedImages.length} IMAGE
-            {selectedImages.length === 1 ? "" : "S"}
-          </button>
-        ))}
-
-      <div className="images">
-        {selectedImages &&
-          selectedImages.map((image, index) => {
-            return (
-              <div key={image} className="image">
-                <img src={image} height="200" alt="upload" />
-                <button onClick={() => deleteHandler(image)}>
-                  delete image
-                </button>
-                <p>{index + 1}</p>
-              </div>
-            );
-          })}
-      </div>
-    </section>
+    </>
   );
 };
 
-export default Uploader1;
+// Just some styles
+const styles = {
+  preview: {
+    marginTop: 50,
+    display: "flex",
+    flexDirection: "column",
+  },
+  image: { maxWidth: "100%", maxHeight: 320 },
+  delete: {
+    cursor: "pointer",
+    padding: 15,
+    background: "red",
+    color: "white",
+    border: "none",
+  },
+};

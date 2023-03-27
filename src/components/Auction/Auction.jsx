@@ -68,7 +68,6 @@ const Auction = (props) => {
             
         <div className="image-container">
           <img className="car-image" src={image.source}></img>
-          <div className="screen-shot-2022-03-17-at-1052-2"></div>
         </div>
     
         <div className="auction-info-container">

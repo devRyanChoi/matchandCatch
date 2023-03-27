@@ -33,18 +33,12 @@
 }
 
 .car-image{
-  margin-left: 10;
-  width:80%;
+  width:90%;
   height:auto;
+  border-radius: 0.5rem;
+  margin-left:0.7rem;
 }
 
-.screen-shot-2022-03-17-at-1052-2 {
-  border: 2px solid;
-  border-color: var(--rose);
-  border-radius: 10px 0px 0px 10px;
-  height: 82px;
-  width: 156px;
-}
 .auction-info-container{
   display:flex;
   flex-direction:column;
@@ -104,6 +98,7 @@
   font-weight: 500;
   font-size: 1.8vw;
   margin-top: 5%;
+  
 }
 
 .view-appraisal-form {

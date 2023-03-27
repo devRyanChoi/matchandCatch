@@ -11,22 +11,26 @@ import AuctionInput from './Sections/AuctionInput';
 const Auction = (props) => {
   const EMPTY = "EMPTY";
   const SAVING ="SAVING";
+  
   const {id} = useParams();
   const carz = props.state.vehicles.filter((cars) => cars.id == id);
-  const auction = props.state.auctions.filter((auc) => auc.vehicle_id == id)
+  const auctions = props.state.auctions.filter((auc) => auc.vehicle_id == id)
   const car = carz[0];
- 
+  const currentuser = props.state.currentuser[0];
   let owner = false;
   if(!car)
   {
     return(<></>);
   }
-  if(car.seller_id === props.state.currentuser[0].id) {
+  
+  if(car.seller_id === currentuser.id) {
     owner = true;
   }
-  console.log(owner);
+
+  const admin = currentuser.admin;
   const imageSrcs = props.state.images.filter((img) => img.vehicle_id == id)
   const image = imageSrcs[0];
+  
   function onBid (number, vehicleId, dealerId, price) {
     
     const auctions = {
@@ -41,7 +45,6 @@ const Auction = (props) => {
   };
 
   function onSelectBid(bidInfo){
-
     const auction ={id:bidInfo.id, vehicle_id: bidInfo.vehicle_id , dealer_id: bidInfo.dealer_id, price: bidInfo.price, selected: true}
     props.selectBid(bidInfo.id, auction);
     props.selectVehicle(bidInfo.id, auction);
@@ -67,7 +70,7 @@ const Auction = (props) => {
           <button className="view-appraisal-form">View Appraisal Form</button>
         </div>
       </div>
-      {props.state.currentuser[0].admin ? (<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>) : (<Result {...props} vehicleId={car.id} selectBid={onSelectBid} owner={owner}/>)}
+      {admin ? (<AuctionInput length={props.state.auctions.length} vehicle_id={car.id} onBid={onBid} auctions={auctions} currentuser={currentuser}/>) : (<Result {...props} vehicleId={car.id} selectBid={onSelectBid} owner={owner}/>)}
     </div>
   );
 }

@@ -1,16 +1,41 @@
 .input-container{
   width:40rem;
-  height:5rem;
+  height:3rem;
   display:flex;
+  margin-top:2rem;
   align-items: center;
-  margin-left:5rem
+
 }
 
 .input-label{
-
+  font-size: 2rem;
+  margin-right:1rem;
   font-family: 'Open Sans';
 }
 
 .input-container-box{
+  background-color: #F4F7FB;
+  font-size:1.5rem;
+  border-color: #F4F7FB;
+  border-radius: 0.1rem;
+  font-family: 'Open Sans';
+}
 
+.auction-bottom-container{
+  display: flex;
+  width: 80%;
+}
+.invalid-box{
+  margin-top:2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  width:100%;
+  height:3rem;
+  background-color:#FFF1E3;
+  color:#9E5B1D;
+  font-weight: 700;
+}
+.invalid-bix-item{
+  margin-left:1rem;
 }

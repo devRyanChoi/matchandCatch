@@ -4,7 +4,7 @@ import './Result.css';
 
 export default function Result (props) {
   const navigate = useNavigate();
-  
+  console.log(props.owner);
     const auction = props.state.auctions.map((auc) => {
       if (auc.vehicle_id === props.vehicleId) {
         const dealerNames = props.state.dealers.filter((dealer) => dealer.id == auc.dealer_id);
@@ -18,8 +18,8 @@ export default function Result (props) {
               </div>
               <div className='resultPrice'>${auc.price.toLocaleString()}</div>
               <div className='resultButtonDiv'>
-              <button className='resultButton' onClick={()=>{
-        props.selectBid(auc); handleClick(auc.id)}}>SELL MY CAR</button>
+              {props.owner ? (<button className='resultButton' onClick={()=>{
+        props.selectBid(auc); handleClick(auc.id)}}>SELL MY CAR</button>) :(<></>)}
               </div>
             </div>
         );

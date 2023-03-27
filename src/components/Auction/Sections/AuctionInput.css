@@ -27,6 +27,7 @@
 }
 .invalid-box{
   margin-top:2rem;
+  margin-bottom:2rem;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -37,5 +38,10 @@
   font-weight: 700;
 }
 .invalid-bix-item{
+  
   margin-left:1rem;
+}
+
+.some-container{
+  margin-bottom:2rem;
 }

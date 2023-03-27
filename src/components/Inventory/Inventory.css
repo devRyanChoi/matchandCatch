@@ -42,6 +42,7 @@
 .inventory-item-info{
   display:flex;
   flex-direction:row;
+  font-size: 1.3rem;
 }
 
 .info-content{

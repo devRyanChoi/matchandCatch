@@ -12,21 +12,25 @@ export default function MyForm(props) {
   return (
     <div className="auction-bottom-container">
       {exist ? (<div className="invalid-box">
-        <div className="invalid-bix-item">Thank You for Bidding</div></div>) : (<div className="input-container">
-    <label className="input-label">BID:
-      <input 
-        className="input-container-box"
-        type="text" 
-        placeholder="$"
-        value={price}
-        onChange={(e) => {
-        setPrice(e.target.value)}}
-      />
-    </label>
-    
-    <button  onClick={()=>{
-    props.onBid(number, props.vehicle_id, props.currentuser.id, price)}}>Submit </button>
-  </div>)}
+        <div className="invalid-bix-item">Thank You for Bidding</div></div>):(<div className="some-container">  
+        <div className="invalid-box">
+          <div className="invalid-bix-item">You can not modify the bid amount after you have submitted your quotes.</div>
+        </div>
+        <div className="input-container">
+          <label className="input-label">BID:
+          <input 
+            className="input-container-box"
+            type="text" 
+            placeholder="$"
+            value={price}
+            onChange={(e) => {
+            setPrice(e.target.value)}}
+          />
+          </label>
+          <button  onClick={()=>{ props.onBid(number, props.vehicle_id, props.currentuser.id, price)}}>Submit </button>
+        </div>
+        </div>
+        )}
       
     </div>
   );

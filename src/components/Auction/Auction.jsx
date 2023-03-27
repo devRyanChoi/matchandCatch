@@ -26,7 +26,13 @@ const Auction = (props) => {
   if(car.seller_id === currentuser.id) {
     owner = true;
   }
+  var maxBid = 0;
 
+  if(auctions.length === 1) {
+    maxBid = auctions[0].price;
+  } else if (auctions.length > 1) {
+    maxBid = Math.max(...auctions.map(x => x.price))
+  }
   const admin = currentuser.admin;
   const imageSrcs = props.state.images.filter((img) => img.vehicle_id == id)
   const image = imageSrcs[0];
@@ -66,7 +72,7 @@ const Auction = (props) => {
         </div>
     
         <div className="auction-info-container">
-          <Infobox maker={car.maker} year={car.year} model={car.model} milage={car.milage}/>
+          <Infobox maker={car.maker} year={car.year} model={car.model} milage={car.milage} maxBid={maxBid}/>
           <button className="view-appraisal-form">View Appraisal Form</button>
         </div>
       </div>

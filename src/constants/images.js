@@ -25,6 +25,7 @@ import srear from '../assets/srear.png';
 import spassengerSide from '../assets/spassengerSide.png';
 import sdriverSide from '../assets/sdriverSide.png';
 import sinterior from '../assets/sinterior.png';
+import c4 from '../assets/c4.png';
 
 export default {
   bg,
@@ -53,5 +54,6 @@ export default {
   spassengerSide,
   srear,
   sfront,
-  sinterior
+  sinterior,
+  c4
 };

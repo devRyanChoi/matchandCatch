@@ -8,9 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 
-export default function Main () {
+export default function Main (props) {
   const navigate = useNavigate();
   const handleClick = () => navigate('/stepper');
+  
 return(
   <div>
     <div className='app__header app__wrapper section__padding' id='home'>

@@ -32,10 +32,9 @@ export {
 
 
 export default function Application(props) {
-  console.log(props.state);
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
-      <Route exact path='/' element={<Main/>}></Route>
+      <Route exact path='/' element={<Main currentuser={props.state.currentuser}/>}></Route>
       <Route exact path='/pastAuction' element={<PastAuction {...props}/>}></Route>
       <Route exact path='/myAuction' element={<MyAuction {...props} />}></Route>
       <Route exact path='/inventory/' element={<Inventory {...props}/>}></Route>

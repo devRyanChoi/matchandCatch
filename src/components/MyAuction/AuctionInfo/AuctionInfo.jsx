@@ -10,12 +10,17 @@ export default function PastAuctionInfo(props) {
   }
   
   const dealer = props.dealer;
-  console.log(dealer);
+
   const auction = props.auction.map((trans) => {
     
     if (dealer.id === trans.dealer_id){
       const vehicleId = trans.vehicle_id;
-      console.log();
+      
+      let bidOver = false;
+      if (props.vehicle[vehicleId - 1].sell_status) {
+        bidOver = true;
+      }
+
       return(
       
         <a href={'/inventory/' + (trans.vehicle_id)} className='pastAuctionItem'>
@@ -30,7 +35,7 @@ export default function PastAuctionInfo(props) {
             </div>
             <div className='userPaied'>${trans.price}</div>
             <div className='userCheckIcon'>
-              <CheckMark done={trans.selected}/>
+              <CheckMark bidOver={bidOver} done={trans.selected} />
             </div>
           </div>
           <div className='pastAuctionDetail'>

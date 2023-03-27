@@ -13,9 +13,6 @@ const Auction = (props) => {
   const SAVING ="SAVING";
   const {id} = useParams();
  
-  const { mode, transition, back } = useVisualMode(
-    EMPTY
-  );
   const carz = props.state.vehicles.filter((cars) => cars.id == id);
 
   const auction = props.state.auctions.filter((auc) => auc.vehicle_id == id)
@@ -67,7 +64,7 @@ const Auction = (props) => {
           <button className="view-appraisal-form">View Appraisal Form</button>
         </div>
       </div>
-      {props.state.admin ? (<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>) : (<Result {...props} vehicleId={car.id} selectBid={onSelectBid}/>)}
+      {props.state.currentuser[0].admin ? (<AuctionInput {...props} vehicle_id={car.id} onBid={onBid}/>) : (<Result {...props} vehicleId={car.id} selectBid={onSelectBid}/>)}
     </div>
   );
 }

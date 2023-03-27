@@ -10,6 +10,7 @@ export default function PastAuctionInfo(props) {
   }
   
   const dealer = props.dealer;
+  console.log(dealer);
   const auction = props.auction.map((trans) => {
     
     if (dealer.id === trans.dealer_id){
@@ -17,7 +18,7 @@ export default function PastAuctionInfo(props) {
       console.log();
       return(
       
-        <a href={'/inventory/'} className='pastAuctionItem'>
+        <a href={'/inventory/' + (trans.vehicle_id)} className='pastAuctionItem'>
           <div className='pastAuctionCarImage'>
             <img />
           </div>

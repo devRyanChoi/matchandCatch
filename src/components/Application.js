@@ -32,6 +32,7 @@ export {
 
 
 export default function Application(props) {
+  console.log(props.state);
   return (
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
       <Route exact path='/' element={<Main/>}></Route>
@@ -40,7 +41,8 @@ export default function Application(props) {
       <Route exact path='/inventory/' element={<Inventory {...props}/>}></Route>
       <Route exact path='/transactions/:id' element={<Transactions {...props}/>}></Route>
       <Route exact path='/inventory/:id' element={<Auction {...props}/>}></Route>
-      <Route exact path='/signin' element={<Signin seller={props.state.sellers} setUsers={props.setUsers}/>}></Route>
+      <Route exact path='/signin' element={<Signin seller={props.state.sellers} 
+       dealer={props.state.dealers} setLogin={props.setLogin} removeLogin={props.removeLogin}/>}></Route>
       <Route exact path='/stepper' element={<Stepper {...props}/>}></Route>
     </Routes>
   );

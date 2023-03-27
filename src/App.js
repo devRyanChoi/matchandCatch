@@ -5,11 +5,11 @@ import './App.css';
 
 
 export default function App() {
-  const { state, setUsers, makeBid, selectBid,selectVehicle} = useApplicationData(); 
+  const { state, setLogin, removeLogin, makeBid, selectBid,selectVehicle} = useApplicationData(); 
   return(
   <div>
-    <Navbar />
-    <Application state={state} setUsers={setUsers} makeBid={makeBid} selectBid={selectBid} selectVehicle={selectVehicle}/>
+    <Navbar currentuser={state.currentuser} setLogin={setLogin} removeLogin={removeLogin}/>
+    <Application state={state} setLogin={setLogin} removeLogin={removeLogin} makeBid={makeBid} selectBid={selectBid} selectVehicle={selectVehicle}/>
   </div>);
 }
 

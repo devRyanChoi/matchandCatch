@@ -2,14 +2,24 @@ import React, {useState} from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { Link } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom';
 import images from '../../constants/images';
 import './Navbar.css';
 
 const Navbar = (props) => {
-  //if (props.admin === true);
+  const navigate = useNavigate();
+  const handleClick = () => navigate('/');
   const [toggleMenu, setToggleMenu] = useState(false);
-
+  if(!props.currentuser[0]) {
+    return(<></>);
+  }
+  const currentuser = props.currentuser[0];
+  function logout() {
+    const emptyUser= {id:0, admin:false, status:false, name:""};
+    props.removeLogin(emptyUser);
+    props.setLogin(emptyUser);
+    
+  }
   return(
   <nav className="app_navbar">
     <div className='app_navbar-logo'>
@@ -23,9 +33,11 @@ const Navbar = (props) => {
         <li className="p__opensans"><a href="#home">Leaderboard</a></li>
       </ul>
       <div className="app__navbar-login">
+      {currentuser.status ? (<a className="p__opensans">Welcome {currentuser.name}</a>) :(<></>)}
         <a href="/myAuction" className="p__opensans">My Auction</a>
         <div/>
-        <a href="/signin" className='p__opensans'>Sign In</a>
+        {currentuser.status ? (<a href="/" className='p__opensans' onClick={() =>{logout(); handleClick()}}>Sign Out</a>) : (<a href="/signin" className='p__opensans'>Sign In</a>)}
+        
       </div>
       <div className="app__navbar-samllscreen">
         <GiHamburgerMenu color='#fff' fontSize={27} onClick={() => setToggleMenu(true)} />

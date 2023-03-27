@@ -13,7 +13,7 @@ export default function App(props) {
   return (
     <div className="App">
       {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm} seller={props.seller} setUsers={props.setUsers}/> : <Register onFormSwitch={toggleForm} />
+        currentForm === "login" ? <Login onFormSwitch={toggleForm} seller={props.seller} dealer={props.dealer} setLogin={props.setLogin} removeLogin={props.removeLogin}/> : <Register onFormSwitch={toggleForm} />
       }
     </div>
   );

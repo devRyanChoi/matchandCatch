@@ -9,14 +9,11 @@ export default function useApplicationData(props) {
     dealers: [],
     auctions: [],
     images: [],
-    status: false,
-    admin: false,
-    users: 1
+    currentuser: {}
   });
 
   //axios.post(url, )
   //axios.post("/api/vehicles",{name:"BMW"})
-  const setUsers = (users) => setState({ ...state, users });
   useEffect(() => {
     Promise.all([
       axios.get("/api/vehicles"),
@@ -24,6 +21,7 @@ export default function useApplicationData(props) {
       axios.get("/api/dealers"),
       axios.get("/api/images"),
       axios.get("/api/sellers"),
+      axios.get("/api/currentuser"),
     ]).then((all) => {
       setState((prev) => ({
         ...prev,
@@ -32,9 +30,30 @@ export default function useApplicationData(props) {
         dealers: all[2].data,
         images: all[3].data,
         sellers: all[4].data,
+        currentuser: all[5].data
       }));
     });
   }, []);
+
+  function setLogin(user) {
+  
+    console.log(`Trying to sign in as ${user}`);
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+
+    return axios.put(`/api/login/${user.id}`, { user }).
+    then((result) =>   {
+      setState({...state, currentuser: user});
+    });
+  };
+  
+  function removeLogin (user) {
+  
+    console.log("DELETE users");
+    return axios.delete(`/api/login/${user.id}`).
+    then((result) =>   {
+      setState({...state, currentuser: {}});
+    });
+  };
 
   function makeBid(id, auction) {
   
@@ -66,5 +85,5 @@ export default function useApplicationData(props) {
     });
   };
 
-  return {state, setUsers, makeBid, selectBid, selectVehicle};
+  return {state, setLogin, removeLogin ,makeBid, selectBid, selectVehicle};
 }

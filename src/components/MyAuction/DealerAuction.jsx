@@ -6,7 +6,6 @@ export default function DealerAuction (props) {
   if(!props.dealer){
     return(<></>);
   }
-
   const auctions = props.auction.filter((auc)=> auc.dealer_id==props.dealer.id);
 
   const completed = auctions.filter((auc) => (auc.selected==true))

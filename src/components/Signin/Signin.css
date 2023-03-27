@@ -5,7 +5,9 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: aquamarine;
+  background: #ffffff;
+  background-image: url('../../assets/main-backgroun.png');
+  background-size:100%;
 }
 
 
@@ -14,7 +16,7 @@
   width: 30rem;
   flex-direction: column;
   background-color: black;
-  border-radius: 1.5 rem;
+  border-radius: 1.5rem;
 }
 
 label {

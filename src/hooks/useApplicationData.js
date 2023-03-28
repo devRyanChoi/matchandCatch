@@ -65,10 +65,19 @@ export default function useApplicationData(props) {
     });
   };
 
+  function registerCar(id, vehicle) {
+
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    return axios.put(`/api/vehicles/register/${id}`, { vehicle }).
+    then((result) =>   {
+      setState({...state, vehicles:[...state.vehicles,vehicle]});
+    });
+  };
+
   function selectBid(id, auction) {
   
-    const auctions = [...state.auctions, auction];
-    //Sends PUT Response to update the Appointment as well as updating remaing spots
+   
+    
     return axios.post(`/api/auctions/select/${id}`, { auction }).
     then((result) =>   {
       setState({...state, auctions:[...state.auctions,auction]});
@@ -77,13 +86,12 @@ export default function useApplicationData(props) {
 
   function selectVehicle(id, auction) {
   
-    const auctions = [...state.auctions, auction];
-    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    
     return axios.post(`/api/vehicles/select/${id}`, { auction }).
     then((result) =>   {
       setState({...state, auctions:[...state.auctions,auction]});
     });
   };
 
-  return {state, setLogin, removeLogin ,makeBid, selectBid, selectVehicle};
+  return {state, setLogin, removeLogin ,makeBid, registerCar, selectBid, selectVehicle};
 }

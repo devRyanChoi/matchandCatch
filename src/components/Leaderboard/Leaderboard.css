@@ -1,0 +1,68 @@
+.leaderboardTitle {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.leaderboardList {
+  margin-left: 20%;
+  margin-right: 20%;
+  border-style: solid;
+  border-color: #aeb6d6;
+  border-width: 0.1px;
+  border-radius: 8px;
+  border-top: 4px solid var(--color-golden);
+  background-color: #ffffff;
+  box-shadow: 10px 5px 5px #e1e1e1;
+  margin-bottom: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.leaderboardItem {
+  padding: 5%;
+  height: 116px;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.leaderboardItem1 {
+  background-color: #cbe7d2;
+}
+
+.leaderboardPoint {
+  text-align: center;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  border-color: #ff0000;
+  border-width: 1px;
+  border-radius: 15px;
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.leaderboardName {
+  font-weight: bold;
+}
+
+.leaderboardTotal {
+  font-family: 'Open Sans';
+}
+
+.leaderboardCompleted {
+  display: flex;
+}
+
+.leaderboardNumber {
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+.leaderboardDetaio {
+  margin-left: 20%;
+  margin-right: auto;
+  width: 100%;
+}

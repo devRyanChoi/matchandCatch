@@ -30,7 +30,7 @@ const Navbar = (props) => {
       <ul className='app_navbar-links'>
         <li className="p__opensans"><a href="/pastAuction">Past auction</a></li>
         <li className="p__opensans"><a href="/inventory">Dealer offer</a></li>
-        <li className="p__opensans"><a href="#home">Leaderboard</a></li>
+        <li className="p__opensans"><a href="/leaderboard">Leaderboard</a></li>
       </ul>
       <div className="app__navbar-login">
       {currentuser.status ? (<a className="p__opensans">Welcome {currentuser.name}</a>) :(<></>)}

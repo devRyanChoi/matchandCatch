@@ -15,7 +15,6 @@ import AApraisalForm from './AppraisalForm/AApraisalForm';
 import CompleteForm from './completeForm/CompleteForm';
 import InformationForm from './InformationForm/InformationForm';
 import './Stepper.css'
-import { images } from '../../constants';
 
 const useStyles = makeStyles((theme) => ({
   button: {

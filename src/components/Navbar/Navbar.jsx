@@ -29,7 +29,7 @@ const Navbar = (props) => {
       </div>
       <ul className='app_navbar-links'>
         <li className="p__opensans"><a href="/pastAuction">Past auction</a></li>
-        <li className="p__opensans"><a href="/inventory">Dealer offer</a></li>
+        <li className="p__opensans"><a href="/inventory">Lists</a></li>
         <li className="p__opensans"><a href="/leaderboard">Leaderboard</a></li>
       </ul>
       <div className="app__navbar-login">

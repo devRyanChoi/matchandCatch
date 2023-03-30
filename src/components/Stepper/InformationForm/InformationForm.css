@@ -18,3 +18,47 @@
   border:0.1rem solid black;
   margin-left: -0.3rem;
 }
+
+.image-container{
+  width:100%;
+  height:5.2rem;
+  display:flex;
+  margin-bottom: 2rem;
+}
+
+.step1-image{
+  width:100%;
+  height:auto;
+}
+
+.next-botton{
+  width:4.5rem;
+  height: 1.5rem;
+  display:flex;
+  align-items: center;
+  color: #fff;
+  background-color: #3f51b5;
+  font-size: 1.3rem;
+}
+
+.next-button:hover{
+  color: #fff;
+  background-color: #303f9f;
+}
+.back-botton{
+  width:6rem;
+  height: 1.5rem;
+  display:flex;
+  align-items: center;
+  color: black;
+  background-color: white;
+  font-size: 1.3rem;
+}
+.button-box{
+  display: flex;
+  flex-direction: row-reverse;
+  width:20%;
+  margin-left: 40%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}

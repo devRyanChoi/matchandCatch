@@ -4,7 +4,11 @@ import { images } from '../../../constants';
 
 export default function CompleteFOrm() {
   return (
+    
     <div className="stepper-cf">
+      <div className="image-container">
+      <img src={images.step4} className="step4-image"></img>
+    </div>
       <div className='cf-img'>
         <img src={images.c4} alt="" />
       </div>      
@@ -14,6 +18,7 @@ export default function CompleteFOrm() {
         </p>
         <p>2. You can choose the dealer who you want to deal with within 48hours.</p>
       </div>
+      
   </div>
   );
 }

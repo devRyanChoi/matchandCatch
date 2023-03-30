@@ -12,7 +12,11 @@ import { Routes, Route } from 'react-router-dom';
 import Transactions from './Transactions/Transactions';
 import {useState} from 'react';
 import Signin from './Signin/Signin';
-import Stepper from './Stepper/Stepper';
+
+import Register from './Stepper/Register';
+import VehicleImage from './Stepper/VehicleImage';
+import CompleteForm from './Stepper/completeForm/CompleteForm';
+import AApraisalForm from './Stepper/AppraisalForm/AApraisalForm';
 export {
   SubHeading,
   Leaderboard,
@@ -24,8 +28,7 @@ export {
   Navbar,
   PastAuction,
   MyAuction,
-  Signin,
-  Stepper
+  Signin
 };
 
 
@@ -34,14 +37,18 @@ export default function Application(props) {
     <Routes> {/* The Switch decides which component to show based on the current URL.*/}
       <Route exact path='/' element={<Main currentuser={props.state.currentuser}/>}></Route>
       <Route exact path='/pastAuction' element={<PastAuction {...props}/>}></Route>
-      <Route exact path='/leaderboard' element={<Leaderboard vehicle={vehicles} />}></Route>
+      <Route exact path='/leaderboard' element={<Leaderboard vehicle={props.state.vehicles} />}></Route>
       <Route exact path='/myAuction' element={<MyAuction {...props} />}></Route>
       <Route exact path='/inventory/' element={<Inventory {...props}/>}></Route>
       <Route exact path='/transactions/:id' element={<Transactions {...props}/>}></Route>
       <Route exact path='/inventory/:id' element={<Auction {...props}/>}></Route>
       <Route exact path='/signin' element={<Signin seller={props.state.sellers} 
        dealer={props.state.dealers} setLogin={props.setLogin} removeLogin={props.removeLogin}/>}></Route>
-      <Route exact path='/stepper' element={<Stepper {...props}/>}></Route>
+
+      <Route exact path='/register' element={<Register currentuser={props.state.currentuser} registerCar={props.registerCar} length={props.state.vehicles.length}/>}></Route>
+      <Route exact path='/register/image' element={<VehicleImage currentuser={props.state.currentuser} registerCar={props.registerCar} length={props.state.vehicles.length}/>}></Route>
+      <Route exact path='/register/complete' element={<CompleteForm />}></Route>
+      <Route exact path='/register/ApraisalForm' element={<AApraisalForm />}></Route>
     </Routes>
   );
 };

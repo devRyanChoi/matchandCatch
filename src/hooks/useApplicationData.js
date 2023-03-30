@@ -85,5 +85,13 @@ export default function useApplicationData(props) {
     });
   };
 
-  return {state, setLogin, removeLogin ,makeBid, selectBid, selectVehicle};
+  function registerCar(id, vehicle) {
+    console.log("car");
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    return axios.put(`/api/vehicles/register/${id}`, { vehicle }).
+    then((result) =>   {
+      setState({...state, vehicles:[...state.vehicles,vehicle]});
+    });
+  };
+  return {state, setLogin, removeLogin ,makeBid, selectBid, selectVehicle, registerCar};
 }

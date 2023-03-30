@@ -13,7 +13,7 @@ const Leaderboard = () => (
           <FontAwesomeIcon icon={solid("medal")} size="2xl" style={{ color: "#fad900", }} />
         </div>
         <div className='leaderboardDetaio'>
-          <div className='leaderboardName'>Michale</div>
+          <div className='leaderboardName'>Lord V</div>
           <div className='leaderboardCompleted'>
             <div className='leaderboardLabel'>Completed Auctions:</div>
             <div className='leaderboardNumber'>21</div>
@@ -25,10 +25,10 @@ const Leaderboard = () => (
           <FontAwesomeIcon icon={solid("medal")} size="2xl" style={{ color: "#dbdbdb", }} />
         </div>
         <div className='leaderboardDetaio'>
-          <div className='leaderboardName'>Michale</div>
+          <div className='leaderboardName'>Ron</div>
           <div className='leaderboardCompleted'>
             <div className='leaderboardLabel'>Completed Auctions:</div>
-            <div className='leaderboardNumber'>21</div>
+            <div className='leaderboardNumber'>19</div>
           </div>
         </div>
       </div>
@@ -37,10 +37,10 @@ const Leaderboard = () => (
           <FontAwesomeIcon icon={solid("medal")} size="2xl" style={{ color: "#c57e1b", }} />
         </div>
         <div className='leaderboardDetaio'>
-          <div className='leaderboardName'>Michale</div>
+          <div className='leaderboardName'>Dumbledore</div>
           <div className='leaderboardCompleted'>
             <div className='leaderboardLabel'>Completed Auctions:</div>
-            <div className='leaderboardNumber'>21</div>
+            <div className='leaderboardNumber'>18</div>
           </div>
         </div>
       </div>
@@ -49,10 +49,10 @@ const Leaderboard = () => (
           4
         </div>
         <div className='leaderboardDetaio'>
-          <div className='leaderboardName'>Michale</div>
+          <div className='leaderboardName'>Hermione</div>
           <div className='leaderboardCompleted'>
             <div className='leaderboardLabel'>Completed Auctions:</div>
-            <div className='leaderboardNumber'>21</div>
+            <div className='leaderboardNumber'>10</div>
           </div>
         </div>
       </div>
@@ -61,10 +61,10 @@ const Leaderboard = () => (
           5
         </div>
         <div className='leaderboardDetaio'>
-          <div className='leaderboardName'>Michale</div>
+          <div className='leaderboardName'>Snape</div>
           <div className='leaderboardCompleted'>
             <div className='leaderboardLabel'>Completed Auctions:</div>
-            <div className='leaderboardNumber'>21</div>
+            <div className='leaderboardNumber'>5</div>
           </div>
         </div>
       </div>

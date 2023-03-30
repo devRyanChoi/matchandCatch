@@ -4,6 +4,6 @@ import React, {useState} from 'react';
 export default function StatusTag(props) {
 
   return(
-    <div className="inventory-status">SOLD</div>
+    <div className="inventory-status"></div>
   )
 }

@@ -62,7 +62,7 @@ const Auction = (props) => {
         Active Auction
       </div>
       <div className="Timer">
-        <Countdown date={Date.now() + 1000*60} />
+        <Countdown date={Date.now() + 1000*300} />
       </div>
       <div className="auction">
             

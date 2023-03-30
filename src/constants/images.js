@@ -26,7 +26,10 @@ import spassengerSide from '../assets/spassengerSide.png';
 import sdriverSide from '../assets/sdriverSide.png';
 import sinterior from '../assets/sinterior.png';
 import c4 from '../assets/c4.png';
-
+import step1 from '../assets/step1.png';
+import step2 from '../assets/step2.png';
+import step3 from '../assets/step3.png';
+import step4 from '../assets/step4.png';
 export default {
   bg,
   chef,
@@ -55,5 +58,9 @@ export default {
   srear,
   sfront,
   sinterior,
-  c4
+  c4,
+  step1,
+  step2,
+  step3,
+  step4
 };

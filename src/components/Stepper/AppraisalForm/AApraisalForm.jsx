@@ -1,10 +1,13 @@
 import React from 'react';
 import './AApraisalForm.css'
-
+import images from '../../../constants/images'
 export default function AApraisalForm() {
   return (
     
     <div className='af-form'>
+      <div className="image-container">
+      <img src={images.step3} className="step3-image"></img>
+    </div>
       <div className='aff-form'>
         <p>1.Select the condition that best mathches your vehicle.</p>
         <div className='af-form-container'>
@@ -177,6 +180,10 @@ export default function AApraisalForm() {
               <input type="radio" name = "subject" value = "appia2"/> No 
             </div>
           </div>
+      </div>
+      <div className="button-box">
+        <button className="back-botton">Cancel</button>
+        <button onClick={() => {}} className="next-botton">Next</button>
       </div>
     </div>
   );

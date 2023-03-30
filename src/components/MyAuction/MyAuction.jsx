@@ -36,7 +36,7 @@ export default function MyAuction(props) {
           
           <div className='myAuctionItem'>
         <div className='myAuctionItemName'>
-          <h4>Waiting for approval</h4>
+          <h4>On going bidding</h4>
         </div>
         <div className='myAuctionItemPrice'>
           <div>Best price:</div>

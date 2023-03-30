@@ -13,7 +13,7 @@ export default function DealerAuction (props) {
   <div className='pastAuctionTotal'>
     <div className='pastAuctionHeader'>
     <h2>My Auction</h2>
-    <p>Completed {completed.length} auctions</p>
+
   </div>
   <AuctionInfo dealer = {props.dealer} vehicle={props.vehicle} auction={auctions} done={false}/>
 </div>);

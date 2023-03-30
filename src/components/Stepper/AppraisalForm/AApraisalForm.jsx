@@ -1,12 +1,16 @@
 import React from 'react';
 import './AApraisalForm.css'
 import images from '../../../constants/images'
+import { useNavigate } from 'react-router-dom';
 export default function AApraisalForm() {
+  const navigate = useNavigate();
+    const handleClick = () => navigate('/register/complete');
   return (
-    
+    <div>
+      <img src={images.step3} className="step3-image"></img>
     <div className='af-form'>
       <div className="image-container">
-      <img src={images.step3} className="step3-image"></img>
+      
     </div>
       <div className='aff-form'>
         <p>1.Select the condition that best mathches your vehicle.</p>
@@ -181,9 +185,11 @@ export default function AApraisalForm() {
             </div>
           </div>
       </div>
-      <div className="button-box">
+      
+    </div>
+    <div className="button-box">
         <button className="back-botton">Cancel</button>
-        <button onClick={() => {}} className="next-botton">Next</button>
+        <button onClick={() => {handleClick()}} className="next-botton">Next</button>
       </div>
     </div>
   );

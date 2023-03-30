@@ -15,28 +15,6 @@
   margin-top: -1rem;
 }
 
-.image-container{
-  width:100%;
-  height:5.2rem;
-  display:flex;
-  margin-bottom: 2rem;
-}
-
-.step2-image{
-  width:100%;
-  height:auto;
-}
-
-.next-botton{
-  width:4.5rem;
-  height: 1.5rem;
-  display:flex;
-  align-items: center;
-  color: #fff;
-  background-color: #3f51b5;
-  font-size: 1.3rem;
-}
-
 .next-button:hover{
   color: #fff;
   background-color: #303f9f;
@@ -53,8 +31,8 @@
 .button-box{
   display: flex;
   flex-direction: row-reverse;
-  width:45%;
-  margin-left: 27.5%;
+  width:20%;
+  margin-left: 40%;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }

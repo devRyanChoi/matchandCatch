@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './InformationForm/InformationForm.css'
-import images from '../../constants/images'
+import './InformationForm.css'
+import images from '../../../constants/images'
 export default function Register (props){
   const currentuser = props.currentuser;
   const [maker, setMaker] = useState('');
@@ -13,9 +13,9 @@ export default function Register (props){
   const handleClick = () => navigate('/register/image');
   console.log(currentuser);
   function sendInfo() {
-    
+
     const car = {id:(props.length + 1), seller_id:currentuser[0].id,maker:maker,model:model,year:year,milage:milage}
-    
+
     props.registerCar(1, car);
     handleClick();
   }
@@ -47,8 +47,5 @@ export default function Register (props){
         <button onClick={() => {sendInfo()}} className="next-botton">Next</button>
       </div>
     </div>
-    
-    
-
   </div>
   )}

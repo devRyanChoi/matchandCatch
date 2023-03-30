@@ -1,12 +1,13 @@
 import React,{useState, useEffect} from 'react';
-// import { Navigate, useNavigate } from 'react-router-dom';
-// import axios from '../../Signin/api/axios';
-import './Uploader1.css';
 
+import './Uploader1.css';
+import images from '../../../constants/images'
+import { useNavigate } from 'react-router-dom';
 
 export default function Uploader1() {
     const [selectedImage, setSelectedImage] = useState();
- 
+    const navigate = useNavigate();
+    const handleClick = () => navigate('/register/ApraisalForm');
     // This function will be triggered when the file field change
     const imageChange = (e) => {
         if (e.target.files && e.target.files.length > 0) {
@@ -16,17 +17,22 @@ export default function Uploader1() {
  
     const onSubmit = (e) => {
         e.preventDefault() 
+        
         alert(URL.createObjectURL(selectedImage))
- 
+        
     }
      
     // This function will be triggered when the "Remove This Image" button is clicked
     const removeSelectedImage = () => {
+      console.log(URL.createObjectURL(selectedImage));
         setSelectedImage();
     };
 
   return (
-    <>
+    <div>
+    <div className="image-container">
+      <img src={images.step2} className="step2-image"></img>
+    </div>
       <div className="container" >
         <h1 className='ct-title'> ReactJS Show Image Preview before Uploading </h1>
         <div className="row">
@@ -50,8 +56,13 @@ export default function Uploader1() {
           </div>
         )}
         </div>
+        
       </div>
-    </>
+      <div className="button-box">
+          <button className="back-botton">Cancel</button>
+          <button onClick={() => {handleClick()}} className="next-botton">Next</button>
+        </div>
+    </div>
   );
 };
 

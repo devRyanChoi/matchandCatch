@@ -10,7 +10,7 @@ import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/
 
 export default function Main (props) {
   const navigate = useNavigate();
-  const handleClick = () => navigate('/stepper');
+  const handleClick = () => navigate('/register');
   
 return(
   <div>

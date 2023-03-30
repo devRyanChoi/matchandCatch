@@ -13,8 +13,8 @@ import Transactions from './Transactions/Transactions';
 import {useState} from 'react';
 import Signin from './Signin/Signin';
 
-import Register from './Stepper/Register';
-import VehicleImage from './Stepper/VehicleImage';
+import Register from './Stepper/InformationForm/Register';
+import VehicleImage from './Stepper/Uploader/VehicleImage';
 import CompleteForm from './Stepper/completeForm/CompleteForm';
 import AApraisalForm from './Stepper/AppraisalForm/AApraisalForm';
 export {

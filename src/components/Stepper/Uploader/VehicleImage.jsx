@@ -4,7 +4,7 @@ import './Uploader1.css';
 import images from '../../../constants/images'
 import { useNavigate } from 'react-router-dom';
 
-export default function Uploader1() {
+export default function Uploader1(props) {
     const [selectedImage, setSelectedImage] = useState();
     const navigate = useNavigate();
     const handleClick = () => navigate('/register/ApraisalForm');
@@ -20,6 +20,15 @@ export default function Uploader1() {
         
         alert(URL.createObjectURL(selectedImage))
         
+    }
+
+    function sendImage () {
+      const tempImage = {
+        id:(props.length +1),
+        vehicle_id: props.length,
+        source:"https://imgur.com/a/YZupMG9"
+      }
+      props.registerImage(props.length,tempImage);
     }
      
     // This function will be triggered when the "Remove This Image" button is clicked

@@ -46,7 +46,7 @@ export default function Application(props) {
        dealer={props.state.dealers} setLogin={props.setLogin} removeLogin={props.removeLogin}/>}></Route>
 
       <Route exact path='/register' element={<Register currentuser={props.state.currentuser} registerCar={props.registerCar} length={props.state.vehicles.length}/>}></Route>
-      <Route exact path='/register/image' element={<VehicleImage currentuser={props.state.currentuser} registerCar={props.registerCar} length={props.state.vehicles.length}/>}></Route>
+      <Route exact path='/register/image' element={<VehicleImage currentuser={props.state.currentuser} registerImage={props.registerImage} length={props.state.vehicles.length}/>}></Route>
       <Route exact path='/register/complete' element={<CompleteForm />}></Route>
       <Route exact path='/register/ApraisalForm' element={<AApraisalForm />}></Route>
     </Routes>

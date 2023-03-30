@@ -93,5 +93,25 @@ export default function useApplicationData(props) {
       setState({...state, vehicles:[...state.vehicles,vehicle]});
     });
   };
-  return {state, setLogin, removeLogin ,makeBid, selectBid, selectVehicle, registerCar};
+
+  function selectVehicle(id, auction) {
+  
+    const auctions = [...state.auctions, auction];
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    return axios.post(`/api/vehicles/select/${id}`, { auction }).
+    then((result) =>   {
+      setState({...state, auctions:[...state.auctions,auction]});
+    });
+  };
+
+  function registerImage(id, image) {
+    console.log("car");
+    //Sends PUT Response to update the Appointment as well as updating remaing spots
+    return axios.put(`/api/register/image/${id}`, { image }).
+    then((result) =>   {
+      setState({...state, images:[...state.images,image]});
+    });
+  };
+  return {state, setLogin, removeLogin ,makeBid, selectBid, selectVehicle, registerCar, registerImage};
 }
+

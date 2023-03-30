@@ -21,7 +21,7 @@ export default function Register (props){
   }
   return(
   <div>
-    <div className="image-container">
+    <div className="image-container-steps">
       <img src={images.step1} className="step1-image"></img>
     </div>
     <div className='fform'>

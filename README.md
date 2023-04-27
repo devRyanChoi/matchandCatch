@@ -7,7 +7,7 @@ Junqi (Joseph) Du
 
 ## Project Description
 
-Match and Catch is a React website for used car buying and auctions. The App utilizes React built-in and custom hooks and allows users to add, edit and delete auctions in real time. Data is persisted by the API server using a PostgreSQL database. The client application communicates with an API server over HTTP, using the JSON format.
+>Match and Catch is a React website for used car buying and auctions. The App utilizes React built-in and custom hooks and allows users to add, edit and delete auctions in real time. Data is persisted by the API server using a PostgreSQL database. The client application communicates with an API server over HTTP, using the JSON format.
 
 ## Project Features
 
@@ -16,7 +16,7 @@ Match and Catch is a React website for used car buying and auctions. The App uti
 - A user can check biding price of Auction.
 - A user can check the ranking of dealers in Leaderboard.
 
-### Home page
+## Home page
 
 
 
@@ -61,11 +61,11 @@ For full functionality both must run concurrently : the customer and the API ser
 
 ## Project Stack
 
-Front-End: React, Axios, JSX, HTML, CSS, Javascript
+**Front-End**: React, Axios, JSX, HTML, CSS, Javascript
 
-Back-End: Express, Node.js, PostgreSQL
+**Back-End**: Express, Node.js, PostgreSQL
 
-Test: Jtest
+**Test**: Jtest
 
 ## Dependencies
 

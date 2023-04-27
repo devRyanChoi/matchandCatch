@@ -1,40 +1,22 @@
-# Getting Started with Create React App
+# Match and Catch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Developer
+Mingun (Ryan) Choi
+Wo Yong Jeong
+Junqi (Joseph) Du
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+Match and Catch is a React website for used car buying and auctions. The App utilizes React built-in and custom hooks and allows users to add, edit and delete auctions in real time. Data is persisted by the API server using a PostgreSQL database. The client application communicates with an API server over HTTP, using the JSON format.
 
-### `npm install`
-```npm install```
+## Project Features
 
-If you face some error of Babel icon, you can use the following command to fix them.
+- A user can put the car on the website into Auction to sell his car.
+- A user needs to fill in car information during the auction process, including Manufacturer, Model, etc.
+- A user can check biding price of Auction.
+- A user can check the ranking of dealers in Leaderboard.
 
-```npm install babel-plugin-macros```
-
-```npm i --save @fortawesome/fontawesome-svg-core```
-
-```npm i --save @fortawesome/free-brands-svg-icons```
-
-```npm install --save @fortawesome/free-solid-svg-icons```
-
-```npm install --save @fortawesome/react-fontawesome```
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+### Home page
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.

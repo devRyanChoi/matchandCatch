@@ -1,4 +1,5 @@
 # Match and Catch
+Lighthouse Labs Final Team Project 
 
 ## Developers
 Mingun (Ryan) Choi <br/>
@@ -17,10 +18,18 @@ Junqi (Joseph) Du
 - A user can check the ranking of dealers in Leaderboard.
 
 ## Home page
+|Image|Description|
+|:--:|:--:|
+|Main page|<img src="|
+|Active Auction| |
+|Inventory page| |
+|Leaderboard| |
+|Past Auction| |
 
 
 
-## Installation
+## Installation![Uploading localhost_3000_pastAuction.png…]()
+
 
 npm install
 

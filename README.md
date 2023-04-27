@@ -20,7 +20,7 @@ Match and Catch is a React website for used car buying and auctions. The App uti
 ## Home page
 |Image|Description|
 |:--:|:--:|
-|Main page|<img src="https://github.com/devRyanChoi/matchandCatch/blob/main/docs/localhost_3000_.png" width="400>|
+|Main page| <img src="https://github.com/devRyanChoi/matchandCatch/blob/main/docs/localhost_3000_.png" width="400">|
 |Active Auction| |
 |Inventory page| |
 |Leaderboard| |

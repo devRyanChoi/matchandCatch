@@ -1,8 +1,8 @@
 # Match and Catch
 
-## Developer
-Mingun (Ryan) Choi
-Wo Yong Jeong
+## Developers
+Mingun (Ryan) Choi <br/>
+Wo Yong Jeong <br/>
 Junqi (Joseph) Du
 
 ## Project Description
@@ -18,50 +18,68 @@ Match and Catch is a React website for used car buying and auctions. The App uti
 
 ### Home page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you face some error of Babel icon, you can use the following command to fix them.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install babel-plugin-macros
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm i --save @fortawesome/fontawesome-svg-core
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm i --save @fortawesome/free-brands-svg-icons
 
-## Learn More
+npm install --save @fortawesome/free-solid-svg-icons
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install --save @fortawesome/react-fontawesome
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running Webpack Development Server
 
-### Code Splitting
+<b>npm start</b> <br>
+Runs the app in the development mode.
+Open http://local:3000 to view it in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The page will reload when you make changes.
+You may also see any lint errors in the console.
 
-### Analyzing the Bundle Size
+<b>npm test</b>
+Launches the test runner in the interactive watch mode.
+See the section about running tests for more information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API server / Database Setup
 
-### Making a Progressive Web App
+For full functionality both must run concurrently : the customer and the API server applications.
+- Start by forking and cloning the scheduler-api server
+- Follow the steps outlined in README to install and setup the database
+- Fork and clone this repo
+- Navigate to the root directory and install dependencies with npm install
+- Once you have the database setup and the scheduler-api server running, run the following command from the root directory of the project npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Project Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Front-End: React, Axios, JSX, HTML, CSS, Javascript
 
-### Deployment
+Back-End: Express, Node.js, PostgreSQL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Test: Jtest
 
-### `npm run build` fails to minify
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Axios
+- Classnames
+- Normalize.css
+- React
+- React-DOM
+- React-MUI
+- React-Script
+- Babel/core
+- Babel-icon
+- Babel-loader
+- Node-sass
+- Prop-types
+- PostgreSQL
+- Cookie-session

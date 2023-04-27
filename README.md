@@ -2,13 +2,13 @@
 Lighthouse Labs Final Team Project 
 
 ## Developers
-Mingun (Ryan) Choi <br/>
+>Mingun (Ryan) Choi <br/>
 Wo Yong Jeong <br/>
 Junqi (Joseph) Du
 
 ## Project Description
 
->Match and Catch is a React website for used car buying and auctions. The App utilizes React built-in and custom hooks and allows users to add, edit and delete auctions in real time. Data is persisted by the API server using a PostgreSQL database. The client application communicates with an API server over HTTP, using the JSON format.
+Match and Catch is a React website for used car buying and auctions. The App utilizes React built-in and custom hooks and allows users to add, edit and delete auctions in real time. Data is persisted by the API server using a PostgreSQL database. The client application communicates with an API server over HTTP, using the JSON format.
 
 ## Project Features
 
@@ -20,7 +20,7 @@ Junqi (Joseph) Du
 ## Home page
 |Image|Description|
 |:--:|:--:|
-|Main page|<img src="|
+|Main page|<img src="https://github.com/devRyanChoi/matchandCatch/blob/main/docs/localhost_3000_.png" width="400>|
 |Active Auction| |
 |Inventory page| |
 |Leaderboard| |

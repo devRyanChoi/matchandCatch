@@ -28,7 +28,7 @@ return(
     </div>
 
     <div className='leaderboardDiv'>
-      <div className='leaderboardTitle'>Leaderboard</div>
+      <div className='leaderboardMainTitle'>Leaderboard</div>
       <div className='leaderboardIcons'>
         <div className='leaderboardIcon'>
           <FontAwesomeIcon icon={solid("medal")} size="2xl" style={{ color: "#fad900", }} />

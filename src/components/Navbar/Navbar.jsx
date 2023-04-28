@@ -46,9 +46,9 @@ const Navbar = (props) => {
           <div className='app__navbar-smallscreen_overlay flex__center slide-bottm'>
             <AiFillCloseCircle fontsize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
             <ul className='app__navbar-smallscreen_links'>
-              <li className="p__opensans"><a href="#home">Past auction</a></li>
-              <li className="p__opensans"><a href="#home">Dealer offer</a></li>
-              <li className="p__opensans"><a href="#home">Leaderboard</a></li>
+              <li className="p__opensans"><a href="/pastAuction">Past auction</a></li>
+              <li className="p__opensans"><a href="/inventory">Dealer offer</a></li>
+              <li className="p__opensans"><a href="/leaderboard">Leaderboard</a></li>
             </ul>
           </div>
         )}

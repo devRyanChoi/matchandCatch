@@ -13,9 +13,18 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .app_navbar-logo img {
   width: 150px;
+  margin-top: 3%;
+  margin-bottom: auto;
 }
+
+.app__navbar-samllscreen {
+  margin-top: 0.5%;
+  margin-bottom: auto;
+}
+
 .app_navbar-links {
   flex: 1;
   display: flex;

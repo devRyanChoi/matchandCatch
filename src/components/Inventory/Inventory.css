@@ -1,14 +1,22 @@
 .inventory{
-  display:flex;
-  flex-direction: row;
-  height:100%;
-  width:100%;
-  background-color: rgb(177, 177, 177);
+  font-family: 'Open Sans';
 }
 
 .inventory-sidebar{
   width:10%;
   height:100%;
+}
+
+.inventoryHeadter {
+  text-align: center;
+}
+
+.inventoryMain {
+  display:flex;
+  flex-direction: row;
+  height:100%;
+  width:100%;
+  background-color: rgb(255, 255, 255);
 }
 
 .inventory-item{

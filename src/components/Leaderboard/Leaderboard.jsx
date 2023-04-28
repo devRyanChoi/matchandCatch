@@ -6,7 +6,7 @@ import './Leaderboard.css';
 
 const Leaderboard = () => (
   <div className='leaderboardTotal'>
-    <div className='leaderboardTitle'>Leaderboard</div>
+    <div className='leaderboardTitle'><h2>Leaderboard</h2></div>
     <div className='leaderboardList'>
       <div className='leaderboardItem leaderboardItem1'>
         <div>

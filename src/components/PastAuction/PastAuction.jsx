@@ -1,6 +1,6 @@
-
 import './PastAuction.css';
 import PastAuctionInfo from './PastAuctionInfo/PastAuctionInfo'
+
 export default function PastAuction (props) {
   if(!props.state.dealers[0]){
     return(<></>);
